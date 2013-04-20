@@ -45,8 +45,8 @@
                     //echo "Filename: " . $image . "<br />";
                     echo "<div style=\"height: 150px; float: left; 
                           margin-right: 10px; margin-bottom: 10px;\">
-                      <img src=\"$image\" style=\"max-height: 100%;\" 
-                          style=\"cursor:pointer\" onclick=\"showImage($image);\" \/>
+                      <img src=\"$image\" style=\"max-height: 100%; cursor:pointer;\" 
+                          onclick=\"showImage($image);\" \/>
                       </div>";
                   }
                 ?>    
