@@ -27,30 +27,6 @@
 }
 
 @font-face {
-    font-family: 'FolksBold';
-    src: url('../fonts/Folks-Bold-webfont.eot');
-    src: url('../fonts/Folks-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Folks-Bold-webfont.woff') format('woff'),
-         url('../fonts/Folks-Bold-webfont.ttf') format('truetype'),
-         url('../fonts/Folks-Bold-webfont.svg#FolksBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'FolksHeavyRegular';
-    src: url('../fonts/Folks-Heavy-webfont.eot');
-    src: url('../fonts/Folks-Heavy-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Folks-Heavy-webfont.woff') format('woff'),
-         url('../fonts/Folks-Heavy-webfont.ttf') format('truetype'),
-         url('../fonts/Folks-Heavy-webfont.svg#FolksHeavyRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
     font-family: 'Enriqueta';
     src: url('../fonts/Enriqueta-Regular.otf');
     font-weight: normal;
@@ -65,7 +41,7 @@
 body {
   background-color: #272727;
   color: #efefef;
-  font-family: "Enriqueta";
+  font-family: "Gentium Basic";
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -169,7 +145,7 @@ nav .vertical-ruler {
   margin-left: 20px;
 }
 
-.clothing:not(.generated-outfit .clothing) {
+.clothing {
   background-color: white;
   width: 75px;
   height: 75px;
@@ -274,6 +250,7 @@ nav .vertical-ruler {
 }
 
 .main-content, .extra-content{
+  display: none;
 }
 
 .main-content-2 {
