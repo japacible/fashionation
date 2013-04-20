@@ -150,7 +150,6 @@ nav > div {
 }
 
 .main-content .clothing {
-  background-color: white;
   width: 75px;
   height: 75px;
   margin: 10px 10px 10px 0px;
@@ -348,7 +347,6 @@ h4 {
   margin-bottom: 10px;
   height: 120px;
   width: 120px;
-  background-color: white;
 }
 
 #generated-outfit-image img{
