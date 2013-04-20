@@ -75,6 +75,7 @@ function populateLoop(string, array) {
 		element.append(img);
 		var parent = "#" + string + "s";
 		$(parent).append(element);
+		element.append("<p class='icon-description'>" + name + "</p>");
 	}
 }
 
@@ -173,7 +174,10 @@ function addToMainDiv(mainDiv, string, array) {
 	var div = $("<div>");
 	div.addClass("clothing");
 	div.addClass("large");
-	img.attr("src", array[string]);
+  if (string == "shoe")
+    img.attr("src", "assets/img/aoc_icons/shoes.png");
+  else
+    img.attr("src", "assets/img/aoc_icons/" + array[string] + ".png");
 	div.append(img);
 	mainDiv.append(div);
 	return mainDiv;

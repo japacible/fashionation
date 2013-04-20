@@ -150,16 +150,16 @@ nav > div {
 }
 
 .main-content .clothing {
-  width: 75px;
-  height: 75px;
+  width: 85px;
+  height: 115px;
   margin: 10px 10px 10px 0px;
   float: left;
   opacity: .7;
 }
 
 .main-content .clothing img {
-  width: 75px;
-  height: 75px;
+  width: 85px;
+  height: 85px;
 }
 
 h3 {
@@ -390,3 +390,10 @@ h4 {
   float: right !important;
 }
 
+.icon-description {
+  font-weight: 2pt;
+  color: #634b34;
+  text-align: center;
+  font-family: "FolksLightRegular";
+  text-transform: lowercase;
+}
