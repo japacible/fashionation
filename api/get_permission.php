@@ -14,15 +14,16 @@
            . "client_id=" .  $app_id 
            . "&redirect_uri=" . urlencode( $post_login_url)
            .  "&scope=publish_stream";
-          echo("<script>top.location.href='" . $dialog_url 
-          . "'</script>");
+          //echo("<script>top.location.href='" . $dialog_url 
+          //. "'</script>");
+          header("Location: " . $dialog_url);
          }
         else {
           $token_url="https://graph.facebook.com/oauth/access_token?"
            . "client_id=" . $app_id 
 		   . "&redirect_uri=" . urlencode($post_login_url)
            . "&client_secret=" . $app_secret
-           . "&code=" . //$code . "&scope=basic_info";
+           . "&code="  // . $code . "&scope=basic_info";
           $response = file_get_contents($token_url);
           $params = null;
           parse_str($response, $params);
