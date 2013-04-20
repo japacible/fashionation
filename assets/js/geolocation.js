@@ -20,10 +20,6 @@ function onGeolocationError(error) {
 	alert("Geolocation error - code: " + error.code + " message : " + error.message);
 }
 
-$(document).ready(function(){
-	getWeather();	
-});
-
 function getWeather() {
 	if(Modernizr.geolocation) {
 		$("#geolocation").html("is supported.");
