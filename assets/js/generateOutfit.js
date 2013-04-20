@@ -97,8 +97,22 @@ function randomOutfit() {
 	$.get("http://pingyang.me/fashionation/api/getoutfits.php?top1=&top2=&bottom=&shoe=", displayOutfit);
 }
 
-function displayOutfit() {
-	alert("here");
-	$(".mainContent").hide();
+function displayOutfit(generatedOutfit) {
+	generatedOutfit =  $.parseJSON(generatedOutfit);
+
+	$(".main-content").hide();
+	$(".extra-content").hide();
 	$(".main-content-2").show();
+
+	// fill in images with selections
+	var concat = generatedOutfit["top1"] + generatedOutfit["top2"] + generatedOutfit["bottom"] + generatedOutfit["shoe"];
+	$("TODO IMAGE").attr("src", concat);
+	$("TODO SHIRT1").attr("src", generatedOutfit["top1"]);
+	if(generatedOutfit["top2"]) {
+		$("TODO SHIRT2").attr("src", generatedOutfit["top2"]);	
+	} else {
+		$("TODO SHIRT2").hide();
+	}
+	$("TODO BOTTOM").attr("src", generatedOutfit["bottom"]);
+	$("TODO SHOE").attr("src", generatedOutfit["shoe"]);
 }
