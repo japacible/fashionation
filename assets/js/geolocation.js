@@ -2,10 +2,24 @@ var latitude = null;
 var longitude = null;
 var timer = null;
 var weatherResult = null;
+var location = null;
+var temp_f = null; 
+var icon = null;
 
 function getWeatherCode() {
-	getWeather();
 	return weatherResult;
+}
+
+function getTemperature() {
+	return temp_f;
+}
+
+function getWeatherStatus() {
+	return icon;
+}
+
+function getCity() {
+	return location;
 }
 
 function useGeolocation(position) {
@@ -49,20 +63,20 @@ function ajaxSuccess(parsed_json) {
 	var location = parsed_json['location']['city'];
 	var temp_f = parsed_json['current_observation']['temp_f'];
 	var icon = parsed_json['current_observation']['icon'];
-	alert("Current temperature in " + location + " is: " + temp_f + " and the icon is: " + icon);
+	//alert("Current temperature in " + location + " is: " + temp_f + " and the icon is: " + icon);
 
 	var niceWeatherIcons=["clear","cloudy","mostlycloudy","mostlysunny","partlycloudy","partlysunny", "sunny","unknown"];
 	var rainWeatherIcons=["chancerain","chancestorms","fog","hazy","rain","tstorms","cloudy"];
 	var badWeatherIcons=["chanceflurries","chancesleet","chancesnow","flurries","sleet", "snow"];
 
 	if ($.inArray(icon, badWeatherIcons) > -1) {
-		alert("bad weather.");
+		//alert("bad weather.");
 		weatherResult = 2;
 	} else if ($.inArray(icon, rainWeatherIcons) > -1) {
-		alert("rainy weather.");
+		//alert("rainy weather.");
 		weatherResult = 1;
 	} else {
-		alert("okay weather.");
+		//alert("okay weather.");
 		weatherResult = 0;
 	}
 }

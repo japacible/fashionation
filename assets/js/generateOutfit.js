@@ -7,13 +7,24 @@ var weather = "";
 
 $(document).ready(function() {
 	$(".main-content-2").hide();
-	weather = getWeatherCode(); 
+	getWeather(); 
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=tops", populateShirts);
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=bottoms", populatePants);
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=shoes", populateShoes);
 	$("#generate").click(generateOutfit);
 	$("#random").click(randomOutfit);
+	populateWeatherStats();
 });
+
+function populateWeatherStats() {
+	var code = getWeatherCode();
+	var temp = getTemperature();
+	var stat = getWeatherStatus();
+	var loc = getCity();
+	$("#city").text(loc);
+	$("#stat").text(stat);
+	$("#temp").text(temp);
+}
 
 function populateShirts(shirtObj) {
 	shirtObj = $.parseJSON(shirtObj);
