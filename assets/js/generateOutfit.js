@@ -187,8 +187,9 @@ function concatenateOutfit(generatedOutfit) {
 function addToMainDiv(mainDiv, string, array) {
 	var img = $("<img>");
 	var paragraph = $("<p>");
-	paragraph.text(array[string]);
+	paragraph.text(array[string]); // TODO use phrazy's  
 	var div = $("<div>");
+	div.addClass("special");
 	div.addClass("clothing");
 	div.addClass("large");
   if (string == "shoe")
