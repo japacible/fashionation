@@ -141,7 +141,7 @@ function hoverPreview() {
 	var paragraph = $("#aoc-help");
 	var image = $("#aoc-help-image");
 	paragraph.html("This is a preview of what <strong>" + full + "</strong> might look like.");
-	image.attr("src", "assets/img/aoc_images/" + id + ".jpg");
+	image.attr("src", "assets/img/aoc_image/" + id + ".jpg");
 }
 
 function grabUploadedImages() {
