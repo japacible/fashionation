@@ -50,18 +50,35 @@
 
 }
 
+@font-face {
+    font-family: 'Enriqueta';
+    src: url('../fonts/Enriqueta-Regular.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Enriqueta';
+    src: url('../fonts/Enriqueta-Bold.otf');
+    font-weight: bold;
+}
+
 body {
-  background-color: #141414;
+  background-color: #272727;
   color: #efefef;
-  font-family: "FolksLightRegular";
+  font-family: "Enriqueta";
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+  font-family: "FolksLightRegular";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .fashionation-header h1 {
-  font-weight: normal;
   font-size: 50pt;
   text-align: center;
   margin-top: 300px;
@@ -75,6 +92,12 @@ h1, h2, h3, h4, h5, h6 {
 #login p {
   margin-top: 30px;
   text-align: center;
+}
+
+.container {
+  border: #a3a3a3 solid 2px;
+  width: 940px;
+  margin: 0 auto;
 }
 
 header {
@@ -91,27 +114,27 @@ h1 {
   letter-spacing: 5px;
 }
 
+nav {
+  overflow: hidden;
+  background-color: #24303a;
+  padding: 15px 0;
+}
+
 nav h2 {
   font-weight: normal;
   text-align: center;
-  padding: 15px 0;
   font-size: 20pt;
-}
-
-nav {
-  overflow: hidden;
-}
-
-.container {
-  border: #a3a3a3 solid 2px;
-  width: 940px;
-  margin: 0 auto;
+  letter-spacing: 5px;
 }
 
 nav > div {
-  width: 470px;
-  background-color: #24303a;
+  width: 468px;
   float: left;
+}
+
+nav .vertical-ruler {
+  width: 2px;
+  background-color: black;
 }
 
 .nav-shadow {
@@ -187,7 +210,7 @@ nav > div {
     height: 300px;
     color: black;
     padding: 45px;
-    margin: 45px;
+    margin: 30px 85px;
 }
 
 #tutorial {
