@@ -11,4 +11,3 @@
 		header('Location: fileupload.php?success=false');
 	}
 ?>
-

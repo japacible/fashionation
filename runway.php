@@ -46,13 +46,13 @@
                     echo "<div style=\"height: 150px; float: left; 
                           margin-right: 10px; margin-bottom: 10px;\">
                       <img src=\"$image\" style=\"max-height: 100%; cursor:pointer;\" 
-                          onclick=\"showImage($image);\" \/>
+                          onclick=\"showImage(\"$image\");\" \/>
                       </div>";
                   }
                 ?>    
               </div>
               <div id="largeImgPanel" onclick="hideMe(this);">
-                <img id="largeImg" style="height: 100%; margin: 0; padding: 0;" />
+                <img id="largeImg" style="height: 75%; margin: 0; padding: 0;" />
               </div>
             </div>
           </div>
