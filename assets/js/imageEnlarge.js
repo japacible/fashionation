@@ -26,14 +26,16 @@ $(document).ready(function() {
 function likePhoto() {
     alert("hi");
     event.stopPropagation();
-    var image = $("#largeImg").attr("src");
+    var image = $("#largeImg").attr("src").substring(15).substring(-4);
     alert("i like this");
+    $.get("pingyang.me/fashionation/api/pic_vote.php?pic_name=" + image + "&vote=1");
 }
 
 function dislikePhoto() {
     event.stopPropagation();
-    var image = $("#largeImg").attr("src");
+    var image = $("#largeImg").attr("src").substring(15).substring(-4);;
     alert("I don't like this");
+    $.get("pingyang.me/fashionation/api/pic_vote.php?pic_name=" + image + "&vote=0");
 }
 
 function hideMessage() {
