@@ -20,7 +20,8 @@ $(document).ready(function() {
 	}
 });
 
-functoin hideErrorMessage() {
+function hideErrorMessage() {
+	alert("lololol");
 	$("#errorMessageUpload").hide();
 }
 
