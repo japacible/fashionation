@@ -175,14 +175,26 @@ nav > div {
 }
 
 .extra-content {
-  border-radius: 20px;
   width: 300px;
   margin-right: 20px;
   padding: 20px 0;
-  background-color: white;
   float: left;
   margin-top: 5px;
   text-align: center;
+}
+
+.corgi-help-speech {
+  border-radius: 20px;
+  background-color: white;
+  padding: 20px;
+}
+
+.corgi-help-speech p {
+  text-align: center;
+  color: #634b34;
+}
+
+.corgi {
 }
 
 #suggestion {
