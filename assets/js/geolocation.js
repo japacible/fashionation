@@ -36,6 +36,7 @@ function onGeolocationError(error) {
 
 function getWeather() {
 	if(Modernizr.geolocation) {
+		console.log("aww yes weather shit");
 		$("#geolocation").html("is supported.");
 		navigator.geolocation.getCurrentPosition(useGeolocation, onGeolocationError);
 		
