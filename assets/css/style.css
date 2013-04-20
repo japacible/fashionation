@@ -152,7 +152,7 @@ nav > div {
     height: 100px;
     background-color: white;
     margin: 25px;
-    color: black;
+    color: black; /*these are going to be images; no text*/
 }
 
 #model {
@@ -166,4 +166,22 @@ nav > div {
     color: black;
     padding: 45px;
     margin: 45px;
+}
+
+#tutorial {
+    background-color: white;
+    color: black;
+}
+
+#tutorialname {
+    height: 50px;
+    font-size: 36px;
+    margin: 15px;
+    padding-top: 25px;
+}
+
+#tutorialcontent {
+    height: 500px;
+    font-size: 16px;
+    margin: 15px;
 }
