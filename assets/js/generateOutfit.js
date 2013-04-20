@@ -13,8 +13,8 @@ $(document).ready(function() {
 	$("#generate").click(generateOutfit);
 	$("#random").click(randomOutfit);
 	getWeather();
-	setTimeout(populateWeatherStats, 700);
-	setTimeout(populateWeatherStats, 1400);
+	setTimeout(populateWeatherStats, 1000);
+	setTimeout(populateWeatherStats, 2000);
 });
 
 function populateWeatherStats() {
