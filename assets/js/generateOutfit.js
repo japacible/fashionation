@@ -167,32 +167,30 @@ function concatenateOutfit(generatedOutfit) {
 
   return concat;
 }
-	// fill in images with selections
-	var holdAllTheImages = $("#generated-outfit-aoc");
+	// fill in images with selection
 	//var concat =(String) ("" + generatedOutfit["top1"] + "" +  generatedOutfit["top2"] + "" + generatedOutfit["bottom"] + "" + generatedOutfit["shoe"]);
 	var image = $("<img>");
 	image.attr("src", "assets/img/outfits/" + concatenateOutfit(generatedOutfit) + ".jpg");
 	$("#generated-outfit-image").prepend(image);
 
-	holdAllTheImages = addToMainDiv(holdAllTheImages, "top1", generatedOutfit);
+	addToMainDiv("top1", generatedOutfit);
 	if(generatedOutfit["top2"]) {
-		holdAllTheImages = addToMainDiv(holdAllTheImages, "top2", generatedOutfit);
+		holdAllTheImages = addToMainDiv("top2", generatedOutfit);
 	} 
-	holdAllTheImages = addToMainDiv(holdAllTheImages, "bottom", generatedOutfit);
-	holdAllTheImages = addToMainDiv(holdAllTheImages, "shoe", generatedOutfit);
+	addToMainDiv("bottom", generatedOutfit);
+	addToMainDiv("shoe", generatedOutfit);
 }
 
-function addToMainDiv(mainDiv, string, array) {
+function addToMainDiv(string, array) {
 	var result;
 	// Look up full name
-	console.log("FIRST MAIN DIV!!!");
-	console.log(mainDiv);
-	$.get("http://pingyang.me/fashionation/api/gettable.php?table=" + string + "s&id=" + array[string], function(fullname) {console.log(mainDiv); result = populateParagraph(mainDiv, string, array, fullname);});
+	$.get("http://pingyang.me/fashionation/api/gettable.php?table=" + string + "s&id=" + array[string], function(fullname) {result = populateParagraph(string, array, fullname);});
 	return result;
   
 }
 
-function populateParagraph(mainDiv, string, array, fullname) {
+function populateParagraph(string, array, fullname) {
+	var mainDiv = $("#generated-outfit-aoc");
 	var div = $("<div>");
 	div.addClass("special");
 	div.addClass("clothing");
