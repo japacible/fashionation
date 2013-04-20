@@ -10,8 +10,5 @@
 	} else {
 		print("bad file type or size");
 	}
-
-	header("Location: http://www.google.com");
-	exit;
 ?>
 
