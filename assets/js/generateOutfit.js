@@ -21,6 +21,14 @@ function populateWeatherStats() {
 	var temp = getTemperature();
 	var stat = getWeatherStatus();
 	var loc = getCity();
+	console.log("code");
+	console.log(code);
+	console.log("temp");
+	console.log(temp);
+	console.log("stat");
+	console.log(stat);
+	console.log('loc');
+	console.log(loc);
 	$("#city").text(loc);
 	$("#stat").text(stat);
 	$("#temp").text(temp);
