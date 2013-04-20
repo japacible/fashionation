@@ -1,4 +1,5 @@
 function showImage(imgName) {
+    alert("CLICKED");
     document.getElementById('largeImg').src = imgName;
     $("#largeImgPanel").show();
     unselectAll();
@@ -19,7 +20,7 @@ $(document).ready(function() {
 		setTimeout(hideMessage, 2000);
 	}
 
-    $("#userimages img").click(function() { alert("CLICKED"); $("#largeImgPanel").show();});
+ //   $("#userimages img").click(function() { alert("CLICKED"); $("#largeImgPanel").show();});
 
     $("#dislike").click(dislikePhoto);
     $("#like").click(likePhoto);
