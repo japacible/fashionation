@@ -55,9 +55,12 @@
           </div><!-- end extra content-->
 
           <div class="main-content-2">
-            <div id="weather">
-              The current weather in <span id="city"></span> is <span id="stat"></span> and <span id="temp"></temp> degrees. 
-            </div>
+            <h3 id="weather">
+              The current weather in 
+              <span class="weather" id="city"></span> is 
+              <span class="weather" id="stat"></span> and 
+              <span class="weather" id="temp"></span> degrees. 
+            </h3>
             <div class="generated-outfit">
               <div id="generated-outfit-aoc">
                 <!--Katlyn the aoc's should go here-->

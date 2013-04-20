@@ -15,7 +15,8 @@ function hideMe(obj) {
 
 $(document).ready(function() {
 	if($("#SuccessMessageUpload")) {
-		$("#SuccessMessageUpload").click(hideMessage);
+		//$("#SuccessMessageUpload").click(hideMessage);
+		setTimeout(hideMessage, 2000);
 	}
 });
 
