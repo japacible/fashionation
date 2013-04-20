@@ -1,8 +1,15 @@
 function showImage(imgName) {
-    alert("CLICKED");
     document.getElementById('largeImg').src = imgName;
+    $.get("http://pingyang.me/fashionation/api/get_vote.php?pic_name=" + imageName, putVoteResults);
     $("#largeImgPanel").css("visibility", "visible");
     unselectAll();
+}
+
+function putVoteResutls(results) {
+    int likes = Integer.parseInt(results.substring(0,1));
+    int dislikse = Integer.parseInt(results.substring(2));
+    $("#currentLikes").text(likes);
+    $("#currentDislikes").text(dislikes);
 }
 
 function unselectAll() {
