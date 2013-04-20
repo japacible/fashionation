@@ -35,7 +35,7 @@
           </div>
           <div class="main-content">
             <!-- End get_header -->
-            <h2>Runway</h2>
+            <h3>Runway</h3>
             <?php
               foreach(glob('uploadedimages/*') as $image)   
               {     
