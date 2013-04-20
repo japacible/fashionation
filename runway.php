@@ -42,10 +42,10 @@
                 //echo "Filename: " . $image . "<br />";
                 echo "<img src=\"$image\" \/>";
               }
-            ?>
-<?php
-  tutorialFooter();
-?>
-
-
+            ?>    
+          </div>
+          <div class="extra-content">
+        </div>
+      </div>
+  </body>
 
