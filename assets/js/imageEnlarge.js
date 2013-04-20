@@ -13,6 +13,15 @@ function hideMe(obj) {
     obj.style.visibility = 'hidden';
 }
 
+$(document).ready(function() {
+	if($("#SuccessMessageUpload")) {
+		$("#SuccessMessageUpload").click(hideMessage);
+	}
+});
+
+function hideMessage() {
+	$("#SuccessMessageUpload").hide();
+}
 
 
 function showLargeImagePanel() {
