@@ -14,6 +14,7 @@ $(document).ready(function() {
 	$("#random").click(randomOutfit);
 	getWeather();
 	setTimeout(populateWeatherStats, 700);
+	setTimeout(populateWeatherStats, 1400);
 });
 
 function populateWeatherStats() {
