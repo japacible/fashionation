@@ -118,13 +118,11 @@ a {
 
 header {
   background-image: url('../img/fashionation_banner.jpg');
-  background-repeat: x-repeat;
 
 }
 
 h1 {
   padding: 40px 0;
-  font-weight: grey;
   text-align: center;
   font-size: 56pt;
   letter-spacing: 5px;
@@ -260,7 +258,7 @@ nav .vertical-ruler {
 }
 
 .highlight {
-  opacacity: 1 !important;
+  opacity: 1 !important;
 }
 
 .outfit-button {
@@ -276,11 +274,10 @@ nav .vertical-ruler {
 }
 
 .main-content, .extra-content{
-  display: none;
 }
 
 .main-content-2 {
-  width: 500px;
+  width: 600px;
   margin: 0 auto;
 }
 
@@ -305,6 +302,4 @@ nav .vertical-ruler {
   float: right;
 }
 
-#outfit-disclaimer {
-  font-size: 8pt;
-}
+
