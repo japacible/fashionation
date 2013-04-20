@@ -7,7 +7,6 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 
 	<script type="text/javascript">
-		var jQ = jQuery.noConflict();
 		var latitude = 0;
 		var longitude = 0;
 
@@ -15,8 +14,8 @@
 			latitude = position.coords.latitude;
 			longitude = position.coords.longitude;
 	
-			jQ("#latitude").html(latitude);
-			jQ("#longitude").html(longitude);
+			$("#latitude").html(latitude);
+			$("#longitude").html(longitude);
 
 			alert(latitude + "," + longitude);
 		}
@@ -25,9 +24,9 @@
 			alert("Geolocation error - code: " + error.code + " message : " + error.message);
 		}
 		
-		jQ(document).ready(function(){
+		$(document).ready(function(){
 			if(Modernizr.geolocation) {
-				jQ("#geolocation").html("is supported.");
+				$("#geolocation").html("is supported.");
 				navigator.geolocation.getCurrentPosition(useGeolocation, onGeolocationError);
 
 				//alert(latitude + "," + longitude);
@@ -60,7 +59,7 @@
 					}
 				});
 			} else {
-				jQ("#geolocation").html("is not supported.");
+				$("#geolocation").html("is not supported.");
 				//return 0;
 			}
 			
