@@ -2,6 +2,7 @@
   include "get_header.php";
 ?>
 
+          <script src="assets/js/generateOutfit.js"></script>
           <div class="main-content">
           	<!--File Upload-->
               <section>
