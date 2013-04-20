@@ -2,9 +2,9 @@
 function tutorialFooter() {
 	?>
 							<div id="tutorial-buttons">
-              <div class="outfit-button" id="tutorial-back">
+              <a class="outfit-button" id="tutorial-back">
                 back
-              </div>
+              </a>
               <div class="outfit-button" id="finish-tutorial">
                 finish tutorial
               </div>
