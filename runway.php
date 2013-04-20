@@ -64,6 +64,9 @@
                   }
                 ?>    
               </div>
+              <div>
+                <p>Upload your own image <a>here!</a></p>
+              </div>
               <div id="largeImgPanel" onclick="hideMe(this);">
                 <img id="largeImg" style="height: 75%; margin: 0; padding: 0;" />
                 <div id="outfit-buttons">
