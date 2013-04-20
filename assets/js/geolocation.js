@@ -2,7 +2,7 @@ var latitude = null;
 var longitude = null;
 var timer = null;
 var weatherResult = null;
-var location = null;
+var cityLocation= null;
 var temp_f = null; 
 var icon = null;
 
@@ -19,7 +19,7 @@ function getWeatherStatus() {
 }
 
 function getCity() {
-	return location;
+	return cityLocation;
 }
 
 function useGeolocation(position) {
