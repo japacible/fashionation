@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var selected = {"top" : [], 
 				"bottom" : [],
 				"shoe" : []
@@ -10,6 +11,10 @@ $(document).ready(function() {
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=shoes", populateShoes);
 	$("#generate").click(generateOutfit);
 	$("#random").click(randomOutfit);
+$(document).ready(function() {
+	$.get("http://pingyang.me/fashionation/api/gettable.php?table=tops", populateShirts);
+	$.get("http://pingyang.me/fashionation/api/gettable.php?table=bottoms", populatePants);
+	$.get("http://pingyang.me/fashionation/api/gettable.php?table=shoes", populateShoes);
 });
 
 function populateShirts(shirtObj) {
@@ -37,7 +42,6 @@ function populateLoop(string, array) {
 		element.addClass("clothing");
 		element.attr("id", id);
 		element.click(highlight);
-
 		var img = $("<img>");
 		img.attr("src", "assets/img/icons/clothing/" + id);
 
@@ -101,4 +105,5 @@ function displayOutfit() {
 	alert("here");
 	$(".mainContent").hide();
 	$(".mainContent2").show();
+}
 }
