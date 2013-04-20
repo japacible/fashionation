@@ -32,29 +32,33 @@
         <div class="main-container">
           <div class="nav-shadow">
           </div>
+
           <div class="main-content">
           	<!--File Upload-->
-            <form action="result.php" method="post" enctype="multipart/form-data">
-				  		<h3>Upload an image:</h3>
-				  		<input type="file" name="image" />
-	            <input type="submit" />
-						</form>
+              <section>
+                <form action="result.php" method="post" enctype="multipart/form-data">
+                    <h3>Upload an image:</h3>
+                  <input type="file" name="image" />
+                  <input id="upload-image-button" type="submit" value="upload image" />
+                </form>
+              </section>
 							<!--Wardrobe-->
 	            <div id="wardrobe">
-	            	<h4>What are you wearing?</h4>
+                <section>
+                  <h3>What are you wearing?</h3>
 	              <div class="article-of-clothing" id="tops">
-	              	<h3>TOPS</h3>
+	              	<h4>TOPS</h4>
 	                <p id="tops-error" class="wardrobe-error">You cannot select more than two tops.</p>
 	              </div>
-	            </div>
 	            <div class="article-of-clothing" id="bottoms">
-	                <h3>BOTTOMS</h3>
+	                <h4>BOTTOMS</h4>
 	                <p id="bottoms-error" class="wardrobe-error">You cannot select more than one bottom.</p>
 	              </div>
 	              <div class="article-of-clothing" id="shoes">
-	                <h3>SHOES</h3>
+	                <h4>SHOES</h4>
 	                <p id="shoes-error" class="wardrobe-error">You cannot select more than one pair of shoes</p>
 	              </div>
+                </section>
 	            </div>
 
               <!--I want buttons like this for submit!-->
@@ -68,6 +72,9 @@
             </div>
           </div> <!--end main-content -->
           <div class="extra-content">
+            <div class="corgi">
+              <img src="assets/img/corgi_monocole_speech.png" alt="Coordi" />
+            </div>
             <div class="corgi-help-speech">
               <div class="aoc-preview"> 
                 <!-- Katlyn put the paragraph of what the Display name is --> 
@@ -89,9 +96,6 @@
                 </p>
                 <img id="aoc-help-image" src="" alt="" />
               </div>
-            </div>
-            <div class="corgi">
-              <img src="assets/img/corgi_monocole_speech.png" alt="Coordi" />
             </div>
           </div><!-- end extra content-->
 
@@ -116,6 +120,7 @@
                 </div>
               </div>
             </div>
+          </div>
           </div>
         </div> <!-- end main container -->
       </div>
