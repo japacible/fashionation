@@ -1,3 +1,9 @@
+<?php
+  if(!isset($_COOKIE['usr'])){
+    echo("<script>top.location.href='./'</script>");
+  }
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -16,29 +22,19 @@
         </header>
         <nav>
           <div>
-            <h2><a href="home.html" title="Home">HOME</a></h2>
+            <h2><a href="home.php" title="Home">HOME</a></h2>
           </div>
           <div>
-            <h2><a href="coordi.html" title="Outfit Suggestor">COORDI</a></h2>
+            <h2><a href="coordi.php" title="Outfit Suggestor">COORDI</a></h2>
           </div>
           <div>
-            <h2><a href="resources.html" title="Tutorials">BASICS</a></h2>
+            <h2><a href="resources.php" title="Tutorials">BASICS</a></h2>
+          </div>
+          <div>
+            <h2><a href="runway.php" title="Runway">RUNWAY</a></h2>
           </div>
         </nav>
         <div class="main-container">
           <div class="nav-shadow">
           </div>
-          <div class="home-content">
-            <!--<div class="main-content">-->
-            <div id="speechbub">
-              <p>
-              Hi! Welcome to <strong>Fashionation</strong>. I am Coordi the Corgi! :D
-              </p>
-          </div>
-          <div class="corgi-speech">
-            <img src="assets/img/corgi_bowler_speech.png" alt="Coordi the Corgi" />
-          </div>
-        </div>
-      </div>
-  </body>
-</html>
+

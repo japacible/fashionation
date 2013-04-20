@@ -167,37 +167,63 @@ function concatenateOutfit(generatedOutfit) {
 
   return concat;
 }
-	console.log("LOOOK HEREEEE");
-	console.log(generatedOutfit);
-	// fill in images with selections
-	var holdAllTheImages = $("#generated-outfit-aoc");
+	// fill in images with selection
 	//var concat =(String) ("" + generatedOutfit["top1"] + "" +  generatedOutfit["top2"] + "" + generatedOutfit["bottom"] + "" + generatedOutfit["shoe"]);
 	var image = $("<img>");
-	image.attr("src", "assets/img/outfits/" + concatenateOutfit(generatedOutfit) + ".jpg");
+	var imageLocation = "assets/img/outfits/" + concatenateOutfit(generatedOutfit) + ".jpg";
+	var exists = ImageExist(imageLocation);
+	if(exists) {
+		image.attr("src", imageLocation);
+	} else {
+		image = $("<p>");
+		image.text("Oops, looks like we don't have a photo of that combination yet!");
+	}
 	$("#generated-outfit-image").prepend(image);
 
-	holdAllTheImages = addToMainDiv(holdAllTheImages, "top1", generatedOutfit);
+	addToMainDiv("top1", generatedOutfit);
 	if(generatedOutfit["top2"]) {
-		holdAllTheImages = addToMainDiv(holdAllTheImages, "top2", generatedOutfit);
+		holdAllTheImages = addToMainDiv("top2", generatedOutfit);
 	} 
-	holdAllTheImages = addToMainDiv(holdAllTheImages, "bottom", generatedOutfit);
-	holdAllTheImages = addToMainDiv(holdAllTheImages, "shoe", generatedOutfit);
+	addToMainDiv("bottom", generatedOutfit);
+	addToMainDiv("shoe", generatedOutfit);
+}
+function ImageExist(url) {
+   var img = new Image();
+   img.src = url;
+   return img.height != 0;
 }
 
-function addToMainDiv(mainDiv, string, array) {
-	var img = $("<img>");
-	var paragraph = $("<p>");
-	paragraph.text(array[string]);
+function addToMainDiv(string, array) {
+	var result;
+	var string2 = string;
+	if(string.indexOf("top") >=0) {
+		string2 = "top";
+	}
+	// Look up full name
+	$.get("http://pingyang.me/fashionation/api/gettable.php?table=" + string2 + "s&id=" + array[string], function(fullname) {result = populateParagraph(string, array, fullname);});
+	return result;
+  
+}
+
+function populateParagraph(string, array, fullname) {
+	var mainDiv = $("#generated-outfit-aoc");
 	var div = $("<div>");
+	div.addClass("special");
 	div.addClass("clothing");
 	div.addClass("large");
-  if (string == "shoe")
-    img.attr("src", "assets/img/aoc_icons/shoes.png");
-  else
-    img.attr("src", "assets/img/aoc_icons/" + array[string] + ".png");
-	div.append(img);
-	div.append(paragraph);
-	mainDiv.append(div);
+
+	var img = $("<img>");
+
+	var paragraph = $("<p>");
+	paragraph.text(fullname); 
+	div.append(paragraph); 
+
+	if (string == "shoe")
+   		img.attr("src", "assets/img/aoc_icons/shoes.png");
+ 	else
+    	img.attr("src", "assets/img/aoc_icons/" + array[string] + ".png");
+		div.append(img);
+		mainDiv.append(div);
 	return mainDiv;
 }
 
