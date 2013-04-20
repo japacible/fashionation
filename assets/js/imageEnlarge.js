@@ -18,7 +18,18 @@ $(document).ready(function() {
 		//$("#SuccessMessageUpload").click(hideMessage);
 		setTimeout(hideMessage, 2000);
 	}
+
+    $(".outfit-button #dislike").click(dislikePhoto);
+    $(".outfit-button #like").click(likePhoto);
 });
+
+function likePhoto() {
+    alert("i like this");
+}
+
+function dislikePhoto() {
+    alert("I don't like this");
+}
 
 function hideMessage() {
 	$("#errorMessageUpload").hide();
