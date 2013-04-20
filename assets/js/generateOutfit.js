@@ -41,7 +41,7 @@ function populateLoop(string, array) {
 		element.attr("id", id);
 		element.click(highlight);
 		element.mouseenter(function() {
-			hoverPreview(id)});
+			hoverPreview(id, name)});
 
 		var img = $("<img>");
 		img.attr("src", "assets/img/icons/clothing/" + id + ".jpg");
@@ -134,7 +134,13 @@ function addToMainDiv(mainDiv, string, array) {
 	return mainDiv;
 }
 
-function hoverPreview(id) {
-	var image = $(".extra-content .aoc-preview img");
+function hoverPreview(id, name) {
+	var location = $("div.aoc-preview");
+	location.html("");
+	var paragraph = $("<p>");
+	paragraph.html("This is a preview of what <strong>" + name + "</strong> might look like.");
+	location.append(paragraph);
+	var image = $("<img>");
 	image.attr("src", "assets/img/outfits/" + id + ".jpg");
+	location.append(image);
 }
