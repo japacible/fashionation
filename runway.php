@@ -32,7 +32,8 @@
               </div>
               <div id="largeImgPanel" onclick="hideMe(this);">
                 <img id="largeImg" style="height: 75%; margin: 0; padding: 0;" />
-                <div id="outfit-buttons">
+              </div>
+              <div id="outfit-buttons">
                   <div class="outfit-button" id="dislike">
                     Dislike
                   </div>
@@ -40,7 +41,6 @@
                     Like
                   </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>
