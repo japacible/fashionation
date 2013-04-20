@@ -39,7 +39,6 @@ function getWeather() {
 
 function checkUpdate() {
 	if(latitude && longitude) {
-		alert("variables are set!");
 		clearInterval(timer);
 		timer = null;
 		$.ajax({
