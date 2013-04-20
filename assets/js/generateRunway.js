@@ -12,7 +12,7 @@ $(document).ready(function() {
 	$("#generate").click(generateOutfit);
 	$("#random").click(randomOutfit);
 	if($("#errorMessageUpload")) {
-		setTimeout(hideErrorMessage, 800);
+		setTimeout(hideErrorMessage, 1500);
 	}
 });
 
