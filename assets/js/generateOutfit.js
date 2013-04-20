@@ -187,7 +187,8 @@ function concatenateOutfit(generatedOutfit) {
 function addToMainDiv(mainDiv, string, array) {
 	var result;
 	// Look up full name
-	$.get("http://pingyang.me/fashionation/api/gettable.php?table=" + string + "s&id=" + array[string], function(fullname) {result = populateParagraph(mainDiv, string, array, fullname);});
+	console.log(mainDiv);
+	$.get("http://pingyang.me/fashionation/api/gettable.php?table=" + string + "s&id=" + array[string], function(fullname) {console.log(mainDiv); result = populateParagraph(mainDiv, string, array, fullname);});
 	return result;
   
 }
@@ -201,7 +202,7 @@ function populateParagraph(mainDiv, string, array, fullname) {
 	var img = $("<img>");
 
 	var paragraph = $("<p>");
-	paragraph.text(array[string]); // TODO use phrazy's 
+	paragraph.text(fullname); 
 	div.append(paragraph); 
 
 	if (string == "shoe")
