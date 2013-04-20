@@ -40,6 +40,8 @@ function populateLoop(string, array) {
 		element.addClass("clothing");
 		element.attr("id", id);
 		element.click(highlight);
+		element.mouseenter(function() {
+			hoverPreview(id)});
 
 		var img = $("<img>");
 		img.attr("src", "assets/img/icons/clothing/" + id + ".jpg");
@@ -106,24 +108,33 @@ function displayOutfit(generatedOutfit) {
 	$(".extra-content").hide();
 	$(".main-content-2").show();
 
+	// fill in images with selections
+	var holdAllTheImages = $("#generated-outfit-aoc");
 	var concat =(String) ("" + generatedOutfit["top1"] + "" +  generatedOutfit["top2"] + "" + generatedOutfit["bottom"] + "" + generatedOutfit["shoe"]);
-	$("#generated-outfit-image img").attr("src", concat + ".jpg");
+	var image = $("<img>");
+	image.attr("src", concat + ".jpg");
+	$("#generated-outfit-image").prepend(image);
 
-	var list = ["top1", "bottom", "shoe"];
-	var arrayItems = $("#generated-outfit-aoc > div.clothing");
- 
-	for(var i = 0; i < arrayItems.length; i++) {
-		arrayItems[i].append(addToMainDiv(holdAllTheImages, list[i], generatedOutfit));
-	}
+	holdAllTheImages = addToMainDiv(holdAllTheImages, "top1", generatedOutfit);
 	if(generatedOutfit["top2"]) {
-		$("#generated-outfit-aoc > div.clothing").append(addToMainDiv(holdAllTheImages, "top2", generatedOutfit));
-	}
-
-	//$(".main-content-2").append(holdAllTheImages);
+		holdAllTheImages = addToMainDiv(holdAllTheImages, "top2", generatedOutfit);
+	} 
+	holdAllTheImages = addToMainDiv(holdAllTheImages, "bottom", generatedOutfit);
+	holdAllTheImages = addToMainDiv(holdAllTheImages, "shoe", generatedOutfit);
 }
 
-function makeImg(string, array) {
+function addToMainDiv(mainDiv, string, array) {
 	var img = $("<img>");
+	var div = $("<div>");
+	div.addClass("clothing");
+	div.addClass("large");
 	img.attr("src", array[string]);
-	return img;
+	div.append(img);
+	mainDiv.append(div);
+	return mainDiv;
+}
+
+function hoverPreview(id) {
+	var image = $(".extra-content .aoc-preview img");
+	image.attr("src", "assets/img/outfits/" + id + ".jpg");
 }
