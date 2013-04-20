@@ -2,7 +2,7 @@
 function tutorialFooter() {
 	?>
 							<div id="tutorial-buttons">
-              <a class="outfit-button" id="tutorial-back">
+              <a href="resources.html" class="outfit-button" id="tutorial-back">
                 back
               </a>
               <div class="outfit-button" id="finish-tutorial">
