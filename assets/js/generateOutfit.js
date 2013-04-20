@@ -3,7 +3,7 @@ var selected = {"top" : [],
 				"shoe" : []
 			   };
 
-var weather = "";
+var cold = "";
 
 $(document).ready(function() {
 	$(".main-content-2").hide();
@@ -20,7 +20,7 @@ $(document).ready(function() {
 function populateWeatherStats() {
 	getWeather();
 
-	var code = getWeatherCode();
+	code = getWeatherCode();
 	var temp = getTemperature();
 	var stat = getWeatherStatus();
 	var loc = getCity();
@@ -138,11 +138,11 @@ function generateOutfit() {
 	}
 
 	$.get("http://pingyang.me/fashionation/api/getoutfits.php?top1=" + top1_id + "&top2=" + top2_id + 
-			"&bottom=" + bottom_id + "&shoe=" + shoe_id + "&weather=" + weather, displayOutfit);
+			"&bottom=" + bottom_id + "&shoe=" + shoe_id + "&weather=" + code, displayOutfit);
 }
 
 function randomOutfit() {
-	$.get("http://pingyang.me/fashionation/api/getoutfits.php?top1=&top2=&bottom=&shoe=&weather=" + weather, displayOutfit2);
+	$.get("http://pingyang.me/fashionation/api/getoutfits.php?top1=&top2=&bottom=&shoe=&weather=" + code, displayOutfit2);
 }
 
 function displayOutfit2(generatedOutfit) {
@@ -180,7 +180,8 @@ function concatenateOutfit(generatedOutfit) {
 
 function displayOutfit(generatedOutfit) {
 	generatedOutfit =  $.parseJSON(generatedOutfit);
-	var index = Math.floor(Math.random() * generatedOutfit.length);
+  var index = Math.floor((Math.random()*generatedOutfit.length));
+  console.log(generatedOutfit);
 	generatedOutfit = generatedOutfit[index];
 
 	$(".main-content").hide();

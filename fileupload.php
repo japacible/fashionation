@@ -1,50 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>fashionation</title>
-    <link href="assets/css/reset.css" type="text/css" rel="stylesheet" />
-    <link href="assets/css/folksfont.css" type="text/css" rel="stylesheet" />
-    <link href="assets/css/style.css" type="text/css" rel="stylesheet" />
-    <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-    <style>
-      #errorMessageUpload {
-        position: absolute;
-        top: 40%;
-        bottom: 40%;
-        left: 40%;
-        right: 40%;
-        width: 20%;
-        height: 20%;
-        background-color: rgba(200,50,50,0.95);
-        padding: 1em;
-      }
-    </style>
-  </head>
-
-  <body>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="http://students.washington.edu/apacible/geo/modernizr-2.5.2.js"></script>
-      <script src="assets/js/generateRunway.js"></script>
-      <div class="container">
-        <header>
-          <h1>fashionation</h1>
-        </header>
-        <nav>
-          <div>
-            <h2><a href="home.html" title="Home">HOME</a></h2>
-          </div>
-          <div>
-            <h2><a href="coordi.html" title="Outfit Suggestor">COORDI</a></h2>
-          </div>
-          <div class="vertical-ruler"></div>
-          <div>
-            <h2><a href="resources.html" title="Tutorials">BASICS</a></h2>
-          </div>
-        </nav>
-
-        <div class="main-container">
-          <div class="nav-shadow">
-          </div>
+<?php 
+  include "get_header.php";
+?>
 
           <div class="main-content">
           	<!--File Upload-->
