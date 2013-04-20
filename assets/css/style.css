@@ -50,21 +50,17 @@
 
 }
 
-
 body {
   background-color: #141414;
   color: #efefef;
   font-family: "FolksLightRegular";
 }
 
-h1 {
+.fashionation-header h1 {
   font-weight: normal;
   font-size: 50pt;
   text-align: center;
   margin-top: 300px;
-}
-
-h1 {
 }
 
 #front-page-image {
@@ -76,3 +72,56 @@ h1 {
   margin-top: 30px;
   text-align: center;
 }
+
+header {
+  background-color: grey;
+}
+
+h1 {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  font-weight: grey;
+  text-align: center;
+  font-size: 56pt;
+  letter-spacing: 5px;
+}
+
+nav h2 {
+  font-weight: normal;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 20pt;
+}
+
+nav div {
+  background-color: blue;
+  box-shadow: 0px 5px 5px grey;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+nav > div {
+  width: 470px;
+  float: left;
+}
+
+.mainContent {
+  clear: both;
+  margin-top: 90px;
+}
+
+#wardrobe {
+  width: 600px;
+}
+
+#tops .top{
+  background-color: white;
+  width: 75px;
+  height: 75px;
+  margin: 10px;
+  float: left;
+}
+
