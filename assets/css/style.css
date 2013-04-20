@@ -351,8 +351,8 @@ h4 {
 
 #generated-outfit-image img{
   border: 1px solid black;
-  min-width: 100px;
-  min-height: 200px;
+  min-width: 300px;
+  min-height: 300px;
   max-width: 300px;
   max-height: 400px;
 }
