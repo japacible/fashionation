@@ -19,8 +19,8 @@ $(document).ready(function() {
 		setTimeout(hideMessage, 2000);
 	}
 
-    $(".outfit-button #dislike").click(dislikePhoto);
-    $(".outfit-button #like").click(likePhoto);
+    $("#dislike").click(dislikePhoto);
+    $("#like").click(likePhoto);
 });
 
 function likePhoto() {
