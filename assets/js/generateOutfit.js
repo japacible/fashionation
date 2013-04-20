@@ -107,11 +107,11 @@ function displayOutfit(generatedOutfit) {
 	$(".main-content-2").show();
 
 	// fill in images with selections
-	var holdAllTheImages = $("<div>");
-	holdAllTheImages.attr("id", "LOLWAT");
-
+	var holdAllTheImages = $("#generated-outfit-aoc");
 	var concat =(String) ("" + generatedOutfit["top1"] + "" +  generatedOutfit["top2"] + "" + generatedOutfit["bottom"] + "" + generatedOutfit["shoe"]);
-	$("#generated-outfit-image img").attr("src", concat + ".jpg");
+	var image = $("<img>");
+	image.attr("src", concat + ".jpg");
+	$("#generated-outfit-image").append(image);
 
 	holdAllTheImages = addToMainDiv(holdAllTheImages, "top1", generatedOutfit);
 	if(generatedOutfit["top2"]) {
@@ -119,8 +119,6 @@ function displayOutfit(generatedOutfit) {
 	} 
 	holdAllTheImages = addToMainDiv(holdAllTheImages, "bottom", generatedOutfit);
 	holdAllTheImages = addToMainDiv(holdAllTheImages, "shoe", generatedOutfit);
-
-	$(".main-content-2").append(holdAllTheImages);
 }
 
 function addToMainDiv(mainDiv, string, array) {
