@@ -4,7 +4,6 @@
               <div class="tutorial-group" id="tutorial-basic">
                 <h3>BASICS</h3>
                 <h4><a href="tutorial-color.php">color</a></h4>
-                <h4><a href="tutorial-fit.php">fit</a></h4>
             </div>
             <div id="tutoriallist">
               <div class="tutorial-group" id="tutorial-ties">
