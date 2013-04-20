@@ -75,17 +75,20 @@ function highlight() {
 				// more than two shirt error
 				$("#tops-error").css("visibility", "visible");
 			setTimeout(function() {
-				$(".tops-error").css("visibility", "none");
+				$(".tops-error").css("visibility", "hidden");
+				alert("done");
 			}, 500);
 			} else if (type == "bottom") {
 				$(".bottoms-error").css("visibility", "visible");
 			setTimeout(function() {
-				$(".bottoms-error").css("visibility", "none");
+				$(".bottoms-error").css("visibility", "hidden");
+				alert("done");
 			}, 500);
 			} else if (type = "shoe") {
 				$(".shoes-error").css("visibility", "visible");
 			setTimeout(function() {
 				$(".shoes-error").css("visibility", "hidden");
+				alert("done");
 			}, 500);
 			}
 		}
