@@ -2,6 +2,7 @@
   include "get_header.php";
   include "tutorial_footer.php";
 ?>
+<script src="/assets/js/generateRunway.js"></script>
           <div class="main-content" style="width: 900px !important; margin-right: 10px">
             <!-- End get_header -->
             <div id="runway">
