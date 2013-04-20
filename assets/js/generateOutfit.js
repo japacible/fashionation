@@ -186,7 +186,7 @@ function concatenateOutfit(generatedOutfit) {
 function addToMainDiv(mainDiv, string, array) {
 	var img = $("<img>");
 	var paragraph = $("<p>");
-	p.text(array[string]);
+	paragraph.text(array[string]);
 	var div = $("<div>");
 	div.addClass("clothing");
 	div.addClass("large");
