@@ -7,7 +7,7 @@ var weather = "";
 
 $(document).ready(function() {
 	$(".main-content-2").hide();
-	weather = getWeatherCode();
+	weather = 0; // getWeatherCode(); When jen's stuff is done!! 
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=tops", populateShirts);
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=bottoms", populatePants);
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=shoes", populateShoes);
