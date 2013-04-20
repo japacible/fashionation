@@ -9,6 +9,19 @@
     <link href="assets/css/reset.css" type:"text/css" rel="stylesheet" />
     <link href="assets/css/folksfont.css" type:"text/css" rel="stylesheet" />
     <link href="assets/css/style.css" type:"text/css" rel="stylesheet" />
+      <style>
+        #SuccessMessageUpload {
+          position: absolute;
+          top: 40%;
+          bottom: 40%;
+          left: 40%;
+          right: 40%;
+          width: 20%;
+          height: 20%;
+          background-color: rgba(200,50,50,0.95);
+          padding: 1em;
+        }
+    </style>
   </head>
 
   <body>
