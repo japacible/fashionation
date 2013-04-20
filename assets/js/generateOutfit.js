@@ -111,7 +111,9 @@ function displayOutfit(generatedOutfit) {
 
 	// fill in images with selections
 	var holdAllTheImages = $("#generated-outfit-aoc");
+	console.log(generatedOutfit);
 	var concat =(String) ("" + generatedOutfit["top1"] + "" +  generatedOutfit["top2"] + "" + generatedOutfit["bottom"] + "" + generatedOutfit["shoe"]);
+	alert(concat);
 	var image = $("<img>");
 	image.attr("src", concat + ".jpg");
 	$("#generated-outfit-image").prepend(image);

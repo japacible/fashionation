@@ -268,13 +268,26 @@ h4 {
 
 #tutorialcontent {
     padding-left: 5px;
-    height: 500px;
     font-size: 16px;
     margin: 15px;
+    margin-bottom: 30px;
 }
 
 .tutorial-group {
   margin-bottom: 20px;
+}
+
+#tutorial-buttons {
+  width: 200px;
+  margin: 0 auto;
+}
+
+#tutorial-back {
+  float: left;
+}
+
+#finish-tutorial {
+  float: right;
 }
 
 .youtube {
