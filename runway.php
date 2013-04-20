@@ -30,7 +30,7 @@
                 <h3>Upload</h3>
                 <p style="color: black;">Upload your own image <strong><a href="fileupload.php">here!</a></strong></p>
               </div>
-              <div id="largeImgPanel" onclick="hideMe(this);">
+              <div id="largeImgPanel" >
                 <img id="largeImg" style="height: 75%; margin: 0; padding: 0;" />
                 <div id="outfit-buttons">
                   <div class="outfit-button" id="dislike">
