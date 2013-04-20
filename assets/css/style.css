@@ -181,6 +181,7 @@ nav > div {
   float: left;
   margin-top: 5px;
   text-align: center;
+  color: #634b34;
 }
 
 .corgi-help-speech {
@@ -191,10 +192,20 @@ nav > div {
 
 .corgi-help-speech p {
   text-align: center;
-  color: #634b34;
+  padding-bottom: 10px;
 }
 
-.corgi {
+.corgi-help-speech ol {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.corgi-help-speech ol li {
+  padding-bottom: 10px;
+}
+
+#aoc-help-image {
+  max-width: 200px;
 }
 
 #suggestion {
