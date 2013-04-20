@@ -145,7 +145,7 @@ nav .vertical-ruler {
   margin-left: 20px;
 }
 
-.clothing {
+#main-content .clothing {
   background-color: white;
   width: 75px;
   height: 75px;
@@ -250,7 +250,6 @@ nav .vertical-ruler {
 }
 
 .main-content, .extra-content{
-  display: none;
 }
 
 .main-content-2 {
