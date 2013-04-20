@@ -167,8 +167,6 @@ function concatenateOutfit(generatedOutfit) {
 
   return concat;
 }
-	console.log("LOOOK HEREEEE");
-	console.log(generatedOutfit);
 	// fill in images with selections
 	var holdAllTheImages = $("#generated-outfit-aoc");
 	//var concat =(String) ("" + generatedOutfit["top1"] + "" +  generatedOutfit["top2"] + "" + generatedOutfit["bottom"] + "" + generatedOutfit["shoe"]);
@@ -187,6 +185,7 @@ function concatenateOutfit(generatedOutfit) {
 function addToMainDiv(mainDiv, string, array) {
 	var result;
 	// Look up full name
+	console.log("FIRST MAIN DIV!!!");
 	console.log(mainDiv);
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=" + string + "s&id=" + array[string], function(fullname) {console.log(mainDiv); result = populateParagraph(mainDiv, string, array, fullname);});
 	return result;
