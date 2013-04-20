@@ -11,14 +11,14 @@
       <script src="http://code.jquery.com/jquery-latest.js"></script>
       <div class="fashionation-header">
         <h1>fashionation</h1>
-        <p>get started with the <strong>basics</strong> of fashion and learn how to <strong>coordinate</strong> outfits</p>
+        <p id="infoblurb">get started with the <strong>basics</strong> of fashion and learn how to <strong>coordinate</strong> outfits</p>
       </div>
       <div id="front-page-image">
         <img src="assets/img/coordi_bowtie.png" alt="fashionation" />
       </div>
       <div id="login">
         <h2>HOW WILL YOU <strong>COORDINATE</strong>?</h2>
-        <a href="./api/get_permission.php">log in now</a>
+        <p id="facebooklogin"><a href="./api/get_permission.php">log in</a></p>
       </div>
   </body>
 </html>

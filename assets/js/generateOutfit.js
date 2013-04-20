@@ -142,7 +142,40 @@ function generateOutfit() {
 }
 
 function randomOutfit() {
-	$.get("http://pingyang.me/fashionation/api/getoutfits.php?top1=&top2=&bottom=&shoe=&weather=" + weather, displayOutfit);
+	$.get("http://pingyang.me/fashionation/api/getoutfits.php?top1=&top2=&bottom=&shoe=&weather=" + weather, displayOutfit2);
+}
+
+function displayOutfit2(generatedOutfit) {
+	$(".main-content").hide();
+	$(".extra-content").hide();
+	$(".main-content-2").show();
+
+function concatenateOutfit(generatedOutfit) {
+  var concat = "";
+  if (generatedOutfit["top1"])
+    concat += generatedOutfit["top1"];
+  if (generatedOutfit["top2"])
+    concat += generatedOutfit["top2"];
+  if (generatedOutfit["bottom"])
+    concat += generatedOutfit["bottom"];
+  if (generatedOutfit["shoe"])
+    concat += generatedOutfit["shoe"];
+
+  return concat;
+}
+	// fill in images with selection
+	//var concat =(String) ("" + generatedOutfit["top1"] + "" +  generatedOutfit["top2"] + "" + generatedOutfit["bottom"] + "" + generatedOutfit["shoe"]);
+	var image = $("<img>");
+	var imageLocation = "assets/img/outfits/" + concatenateOutfit(generatedOutfit) + ".jpg";
+  image.attr("src", imageLocation);
+	$("#generated-outfit-image").prepend(image);
+
+	addToMainDiv("top1", generatedOutfit);
+	if(generatedOutfit["top2"]) {
+		holdAllTheImages = addToMainDiv("top2", generatedOutfit);
+	} 
+	addToMainDiv("bottom", generatedOutfit);
+	addToMainDiv("shoe", generatedOutfit);
 }
 
 function displayOutfit(generatedOutfit) {
