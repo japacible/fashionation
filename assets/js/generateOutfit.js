@@ -139,7 +139,7 @@ function hoverPreview(id, name) {
 	location.html("");
 	var paragraph = $("<p>");
 	paragraph.html("This is a preview of what <strong>" + name + "</strong> might look like.");
-	loation.append(paragraph);
+	location.append(paragraph);
 	var image = $("<img>");
 	image.attr("src", "assets/img/outfits/" + id + ".jpg");
 	location.append(image);
