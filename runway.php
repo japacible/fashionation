@@ -39,7 +39,7 @@
                   <div class="outfit-button" id="like">
                     Like
                   </div>
-                  <div style="clear: both;">Current Likes: <span id="currentLikes"></span> Current Dislikes: <span id="currentDislikes"></span>
+                  <div style="clear: both;">Current Likes: <span id="currentLikes"></span> <br/>Current Dislikes: <span id="currentDislikes"></span>
                   </div>
                 </div>
               </div>
