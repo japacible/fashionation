@@ -357,7 +357,7 @@ color: white;
 
 .generated-outfit .clothing {
   margin-bottom: 10px;
-  height: 120px;
+  min-height: 50px;
   width: 120px;
 }
 
@@ -372,6 +372,15 @@ color: white;
 #generated-outfit-image p {
   width: 300px;
   height: 400px;
+}
+
+#generated-outfit-aoc p {
+  text-align: center;
+  color: #634b34;
+}
+
+#generated-outfit-aoc .clothing {
+  text-align: center;
 }
 
 
