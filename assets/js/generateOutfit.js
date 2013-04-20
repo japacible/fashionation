@@ -40,6 +40,8 @@ function populateLoop(string, array) {
 		element.addClass("clothing");
 		element.attr("id", id);
 		element.click(highlight);
+		element.mouseenter(function() {
+			hoverPreview(id)});
 
 		var img = $("<img>");
 		img.attr("src", "assets/img/icons/clothing/" + id + ".jpg");
@@ -130,4 +132,9 @@ function addToMainDiv(mainDiv, string, array) {
 	div.append(img);
 	mainDiv.append(div);
 	return mainDiv;
+}
+
+function hoverPreview(id) {
+	var image = $(".extra-content .aoc-preview img");
+	image.attr("src", "assets/img/outfits/" + id + ".jpg");
 }
