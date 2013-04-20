@@ -230,17 +230,18 @@ nav .vertical-ruler {
 }
 
 #tutorial {
-    color: black;
+  color: #634b34;
 }
 
 #tutorialname {
     height: 50px;
-    font-size: 36px;
+    font-size: 56px;
     margin: 15px;
     padding-top: 25px;
 }
 
 #tutorialcontent {
+    padding-left: 5px;
     height: 500px;
     font-size: 16px;
     margin: 15px;
@@ -252,4 +253,12 @@ nav .vertical-ruler {
 
 .youtube {
   text-align: center;
+}
+
+.clothing:hover {
+  opacity: 1;
+}
+
+.highlight {
+  opacacity: 1;
 }
