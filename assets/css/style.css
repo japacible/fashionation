@@ -120,13 +120,13 @@ nav > div {
   margin-bottom: 25px;
 }
 
-.mainContent {
+.main-container {
   clear: both;
   overflow: hidden;
   background-image: url('../img/wood_background.jpg');
 }
 
-#wardrobe {
+.main-content {
   width: 600px;
   float: left;
   margin-left: 20px;
@@ -153,7 +153,7 @@ nav > div {
   margin-bottom: 20px;
 }
 
-.aoc-preview {
+.extra-content {
   width: 300px;
   margin-right: 20px;
   padding: 20px 0;
