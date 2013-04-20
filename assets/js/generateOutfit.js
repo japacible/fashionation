@@ -106,24 +106,29 @@ function displayOutfit(generatedOutfit) {
 	$(".extra-content").hide();
 	$(".main-content-2").show();
 
+	// fill in images with selections
+	var holdAllTheImages = $("<div>");
+	holdAllTheImages.attr("id", "LOLWAT");
+
 	var concat =(String) ("" + generatedOutfit["top1"] + "" +  generatedOutfit["top2"] + "" + generatedOutfit["bottom"] + "" + generatedOutfit["shoe"]);
 	$("#generated-outfit-image img").attr("src", concat + ".jpg");
 
-	var list = ["top1", "bottom", "shoe"];
-	var arrayItems = $("#generated-outfit-aoc > div.clothing");
- 
-	for(var i = 0; i < arrayItems.length; i++) {
-		arrayItems[i].append(addToMainDiv(holdAllTheImages, list[i], generatedOutfit));
-	}
+	holdAllTheImages = addToMainDiv(holdAllTheImages, "top1", generatedOutfit);
 	if(generatedOutfit["top2"]) {
-		$("#generated-outfit-aoc > div.clothing").append(addToMainDiv(holdAllTheImages, "top2", generatedOutfit));
-	}
+		holdAllTheImages = addToMainDiv(holdAllTheImages, "top2", generatedOutfit);
+	} 
+	holdAllTheImages = addToMainDiv(holdAllTheImages, "bottom", generatedOutfit);
+	holdAllTheImages = addToMainDiv(holdAllTheImages, "shoe", generatedOutfit);
 
-	//$(".main-content-2").append(holdAllTheImages);
+	$(".main-content-2").append(holdAllTheImages);
 }
 
-function makeImg(string, array) {
+function addToMainDiv(mainDiv, string, array) {
 	var img = $("<img>");
+	div.addClass("clothing");
+	div.addClass("large");
 	img.attr("src", array[string]);
-	return img;
+	div.append(img);
+	mainDiv.append(div);
+	return mainDiv;
 }
