@@ -18,7 +18,7 @@
       </div>
       <div id="login">
         <h2>HOW WILL YOU <strong>COORDINATE</strong>?</h2>
-        <p>log in now</p>
+        <a href="./api/get_permission.php">log in now</a>
       </div>
   </body>
 </html>
