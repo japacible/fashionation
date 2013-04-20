@@ -78,10 +78,26 @@ a {
   text-decoration: none;
 }
 
+.fashionation-header p {
+  text-align: center;
+  font-size: 12pt;
+}
+
 .fashionation-header h1 {
   font-size: 50pt;
   text-align: center;
-  margin-top: 300px;
+}
+
+.fashionation-header strong, #login strong {
+  color: #769bd1;
+}
+
+
+#login h2 {
+  text-align: center;
+  font-family: "FolksLightRegular";
+  font-size: 20pt;
+  letter-spacing: 5px;
 }
 
 #front-page-image {
