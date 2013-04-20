@@ -11,14 +11,14 @@ $(document).ready(function() {
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=shoes", populateShoes);
 	$("#generate").click(generateOutfit);
 	$("#random").click(randomOutfit);
-	if($("#SuccessMessageUpload")) {
+	if($("#errorMessageUpload")) {
 		setTimeout(hideErrorMessage, 2000);
 		//$("#errorMessageUpload").click(hideErrorMessage);
 	}
 });
 
 function hideErrorMessage() {
-	$("#SuccessMessageUpload").hide();
+	$("#errorMessageUpload").hide();
 }
 
 function populateShirts(shirtObj) {
