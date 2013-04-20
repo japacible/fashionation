@@ -39,6 +39,7 @@ function checkUpdate() {
 		  url : "http://api.wunderground.com/api/9dfc726c463f0923/geolookup/conditions/q/47.6172938,-122.32990470000001.json",
 		  dataType : "jsonp",
 		  success : ajaxSuccess
+		});
 	}
 }
 
