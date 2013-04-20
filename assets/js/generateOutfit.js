@@ -39,12 +39,13 @@ function populateLoop(string, array) {
 		element.addClass(string);
 		element.addClass("clothing");
 		element.attr("id", id);
+		element.attr("alt", name)
 		element.click(highlight);
-		element.mouseenter(function() {
-			hoverPreview(id, name)});
+		element.mouseenter(hoverPreview);
 
 		var img = $("<img>");
 		img.attr("src", "assets/img/icons/clothing/" + id + ".jpg");
+		img.attr("alt", name);
 
 		element.append(img);
 		var parent = "#" + string + "s";
@@ -134,13 +135,28 @@ function addToMainDiv(mainDiv, string, array) {
 	return mainDiv;
 }
 
-function hoverPreview(id, name) {
-	var location = $("div.aoc-preview");
-	location.html("");
-	var paragraph = $("<p>");
-	paragraph.html("This is a preview of what <strong>" + name + "</strong> might look like.");
-	location.append(paragraph);
-	var image = $("<img>");
-	image.attr("src", "assets/img/outfits/" + id + ".jpg");
-	location.append(image);
+function hoverPreview() {
+	var id = $(this).attr("id");
+	var full = $(this).attr("alt");
+	var paragraph = $("#aoc-help");
+	var image = $("#aoc-help-image");
+	paragraph.html("This is a preview of what <strong>" + full + "</strong> might look like.");
+	image.attr("src", "assets/img/aoc_images/" + id + ".jpg");
+}
+
+function grabUploadedImages() {
+	var ul = $("<ul>");
+	var arrayPNG = glob("/uploadedimages/*.png");
+	var arrayJPG = glob("/uploadedimages/*.jpg");
+	for(var i = 0; i < arrayPNG.length; i++) {
+		var img = $("<img>");
+		img.attr("src", arrayPNG[i]);
+		ul.append(img);
+	}
+	for(var i = 0; i < arrayJPG.length; i++) {
+		var img = $("<img>");
+		img.attr("src", arrayJPG[i]);
+		ul.append(img);
+	}
+	$(body).append(ul);
 }
