@@ -125,6 +125,7 @@ function displayOutfit(generatedOutfit) {
 
 function addToMainDiv(mainDiv, string, array) {
 	var img = $("<img>");
+	var div = $("<div>");
 	div.addClass("clothing");
 	div.addClass("large");
 	img.attr("src", array[string]);
