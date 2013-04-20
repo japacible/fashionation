@@ -125,3 +125,11 @@ nav > div {
   float: left;
 }
 
+#speechbub {
+    border-radius: 20px;
+    background-color: white;
+    height: 300px;
+    color: black;
+    padding: 45px;
+    margin: 45px;
+}
