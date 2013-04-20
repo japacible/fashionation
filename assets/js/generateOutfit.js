@@ -137,10 +137,8 @@ function addToMainDiv(mainDiv, string, array) {
 function hoverPreview() {
 	var id = $(this).attr("id");
 	var full = $(this).attr("alt");
-	alert(id);
-	alert(full);
 	var paragraph = $("#aoc-help");
 	var image = $("#aoc-help-image");
-	paragraph.html("This is a preview of what <strong>" + name + "</strong> might look like.");
+	paragraph.html("This is a preview of what <strong>" + full + "</strong> might look like.");
 	image.attr("src", "assets/img/outfits/" + id + ".jpg");
 }
