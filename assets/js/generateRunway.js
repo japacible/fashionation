@@ -17,7 +17,6 @@ $(document).ready(function() {
 });
 
 function hideErrorMessage() {
-	alert("lololol");
 	$("#errorMessageUpload").hide();
 }
 
