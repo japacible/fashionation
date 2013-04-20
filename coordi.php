@@ -1,39 +1,23 @@
-<?php 
-  include "get_header.php";
-?>
+<?php include "get_header.php"; ?>
 
+      <script src="http://students.washington.edu/apacible/geo/modernizr-2.5.2.js"></script>
+          <script src="assets/js/geolocation.js"></script>
           <script src="assets/js/generateOutfit.js"></script>
           <div class="main-content">
-          	<!--File Upload-->
-              <section>
-                <form action="result.php" method="post" enctype="multipart/form-data">
-                    <h3>Upload an image:</h3>
-                  <input type="file" name="image" />
-                  <input id="upload-image-button" type="submit" value="upload image" />
-               
-  							<!--Wardrobe-->
-  	            <div id="wardrobe">
-                  <section>
-                    <h3>What are you wearing?</h3>
-  	              <div class="article-of-clothing" id="tops">
-  	              	<h4>TOPS</h4>
-  	                <p id="tops-error" class="wardrobe-error">You cannot select more than two tops.</p>
-  	              </div>
-  	            <div class="article-of-clothing" id="bottoms">
-  	                <h4>BOTTOMS</h4>
-  	                <p id="bottoms-error" class="wardrobe-error">You cannot select more than one bottom.</p>
-  	              </div>
-  	              <div class="article-of-clothing" id="shoes">
-  	                <h4>SHOES</h4>
-  	                <p id="shoes-error" class="wardrobe-error">You cannot select more than one pair of shoes</p>
-  	              </div>
-                  </section>
-  	            </div>
-              
-              </form>
-            </section>
-
-              <!--I want buttons like this for submit!-->
+            <div id="wardrobe">
+              <div class="article-of-clothing" id="tops">
+                <h3>TOPS</h3>
+                <p id="tops-error" class="wardrobe-error">You cannot select more than two tops.</p>
+              </div>
+              <div class="article-of-clothing" id="bottoms">
+                <h3>BOTTOMS</h3>
+                <p id="bottoms-error" class="wardrobe-error">You cannot select more than one bottom.</p>
+              </div>
+              <div class="article-of-clothing" id="shoes">
+                <h3>SHOES</h3>
+                <p id="shoes-error" class="wardrobe-error">You cannot select more than one pair of shoes</p>
+              </div>
+            </div>
             <div id="outfit-buttons">
               <div class="outfit-button" id="generate">
                 coordinate
@@ -50,6 +34,12 @@
             <div class="corgi-help-speech">
               <div class="aoc-preview"> 
                 <!-- Katlyn put the paragraph of what the Display name is --> 
+                <p id="aoc-help">
+                  Hover over the articles of clothing to get a preview of what it looks like!
+                </p>
+                <div class="aoc-wrapper">
+                <img id="aoc-help-image" src="" alt="" />
+                </div>
                 <p>
                   Time to <strong>coordi</strong>nate some awesome outfits! There
                   are two different types ways of generating outfits!
@@ -63,7 +53,7 @@
                     2. Select <strong>random</strong> for a completely random outfit!
                   </li >
                 </ol>
-                <p id="aoc-help">
+                <p>
                   Hover over the articles of clothing to get a preview of what it looks like!
                 </p>
                 <img id="aoc-help-image" src="" alt="" />
@@ -72,6 +62,12 @@
           </div><!-- end extra content-->
 
           <div class="main-content-2">
+            <h3 id="weather">
+              The current weather in 
+              <span class="weather" id="city"></span> is 
+              <span class="weather" id="stat"></span> and 
+              <span class="weather" id="temp"></span> degrees. 
+            </h3>
             <div class="generated-outfit">
               <div id="generated-outfit-aoc">
                 <!--Katlyn the aoc's should go here-->
@@ -83,8 +79,8 @@
                   and styles will not match <strong>exactly</strong>
                 </p>
                 <div id="generated-outfit-buttons">
-                  <div class="outfit-button" id="love">
-                    &lt;3
+                  <div class="outfit-button" id="return-to-coordi">
+                    back
                   </div>
                   <div class="outfit-button" id="generate-another">
                     coordinate
@@ -93,14 +89,6 @@
               </div>
             </div>
           </div>
-          </div>
-          <?php 
-        if(isset($_GET["success"])) {?>
-        <div id="errorMessageUpload">
-          Whoops! Looks like your file didn't upload correctly. Please make sure it is either a .jpg, .jpeg, or .png. Please also make sure that the file is under 500KB. (Click this message box to hide.)
-        </div>
-        <?php } ?>
-              
         </div> <!-- end main container -->
       </div>
   </body>

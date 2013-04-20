@@ -1,11 +1,7 @@
 function showImage(imgName) {
     document.getElementById('largeImg').src = imgName;
-    showLargeImagePanel();
-    unselectAll();
-}
-
-function showLargeImagePanel() {
     document.getElementById('largeImgPanel').style.visibility = 'visible';
+    unselectAll();
 }
 
 function unselectAll() {
@@ -15,4 +11,20 @@ function unselectAll() {
 
 function hideMe(obj) {
     obj.style.visibility = 'hidden';
+}
+
+$(document).ready(function() {
+	if($("#errorMessageUpload")) {
+		//$("#SuccessMessageUpload").click(hideMessage);
+		setTimeout(hideMessage, 2000);
+	}
+});
+
+function hideMessage() {
+	$("#errorMessageUpload").hide();
+}
+
+
+function showLargeImagePanel() {
+    document.getElementById('largeImgPanel').style.visibility = 'visible';
 }

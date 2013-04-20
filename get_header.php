@@ -15,7 +15,7 @@
 
   <body>
       <script src="http://code.jquery.com/jquery-latest.js"></script>
-      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/js/modernizr-2.5.2.js"></script>
       <div class="container">
         <header>
           <h1>fashionation</h1>

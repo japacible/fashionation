@@ -3,7 +3,7 @@ var selected = {"top" : [],
 				"shoe" : []
 			   };
 
-var weather = "";
+var cold = "";
 
 $(document).ready(function() {
 	$(".main-content-2").hide();
@@ -13,14 +13,14 @@ $(document).ready(function() {
 	$("#generate").click(generateOutfit);
 	$("#random").click(randomOutfit);
 	getWeather();
-	setTimeout(populateWeatherStats, 700);
-	setTimeout(populateWeatherStats, 1400);
+	setTimeout(populateWeatherStats, 1000);
+	setTimeout(populateWeatherStats, 2000);
 });
 
 function populateWeatherStats() {
 	getWeather();
 
-	var code = getWeatherCode();
+	code = getWeatherCode();
 	var temp = getTemperature();
 	var stat = getWeatherStatus();
 	var loc = getCity();
@@ -138,16 +138,50 @@ function generateOutfit() {
 	}
 
 	$.get("http://pingyang.me/fashionation/api/getoutfits.php?top1=" + top1_id + "&top2=" + top2_id + 
-			"&bottom=" + bottom_id + "&shoe=" + shoe_id + "&weather=" + weather, displayOutfit);
+			"&bottom=" + bottom_id + "&shoe=" + shoe_id + "&weather=" + code, displayOutfit);
 }
 
 function randomOutfit() {
-	$.get("http://pingyang.me/fashionation/api/getoutfits.php?top1=&top2=&bottom=&shoe=&weather=" + weather, displayOutfit);
+	$.get("http://pingyang.me/fashionation/api/getoutfits.php?top1=&top2=&bottom=&shoe=&weather=" + code, displayOutfit2);
+}
+
+function displayOutfit2(generatedOutfit) {
+	$(".main-content").hide();
+	$(".extra-content").hide();
+	$(".main-content-2").show();
+
+function concatenateOutfit(generatedOutfit) {
+  var concat = "";
+  if (generatedOutfit["top1"])
+    concat += generatedOutfit["top1"];
+  if (generatedOutfit["top2"])
+    concat += generatedOutfit["top2"];
+  if (generatedOutfit["bottom"])
+    concat += generatedOutfit["bottom"];
+  if (generatedOutfit["shoe"])
+    concat += generatedOutfit["shoe"];
+
+  return concat;
+}
+	// fill in images with selection
+	//var concat =(String) ("" + generatedOutfit["top1"] + "" +  generatedOutfit["top2"] + "" + generatedOutfit["bottom"] + "" + generatedOutfit["shoe"]);
+	var image = $("<img>");
+	var imageLocation = "assets/img/outfits/" + concatenateOutfit(generatedOutfit) + ".jpg";
+  image.attr("src", imageLocation);
+	$("#generated-outfit-image").prepend(image);
+
+	addToMainDiv("top1", generatedOutfit);
+	if(generatedOutfit["top2"]) {
+		holdAllTheImages = addToMainDiv("top2", generatedOutfit);
+	} 
+	addToMainDiv("bottom", generatedOutfit);
+	addToMainDiv("shoe", generatedOutfit);
 }
 
 function displayOutfit(generatedOutfit) {
 	generatedOutfit =  $.parseJSON(generatedOutfit);
-	var index = Math.floor(Math.random() * generatedOutfit.length);
+  var index = Math.floor((Math.random()*generatedOutfit.length));
+  console.log(generatedOutfit);
 	generatedOutfit = generatedOutfit[index];
 
 	$(".main-content").hide();
@@ -171,13 +205,7 @@ function concatenateOutfit(generatedOutfit) {
 	//var concat =(String) ("" + generatedOutfit["top1"] + "" +  generatedOutfit["top2"] + "" + generatedOutfit["bottom"] + "" + generatedOutfit["shoe"]);
 	var image = $("<img>");
 	var imageLocation = "assets/img/outfits/" + concatenateOutfit(generatedOutfit) + ".jpg";
-	var exists = ImageExist(imageLocation);
-	if(exists) {
-		image.attr("src", imageLocation);
-	} else {
-		image = $("<p>");
-		image.text("Oops, looks like we don't have a photo of that combination yet!");
-	}
+  image.attr("src", imageLocation);
 	$("#generated-outfit-image").prepend(image);
 
 	addToMainDiv("top1", generatedOutfit);
@@ -216,13 +244,13 @@ function populateParagraph(string, array, fullname) {
 
 	var paragraph = $("<p>");
 	paragraph.text(fullname); 
-	div.append(paragraph); 
 
 	if (string == "shoe")
    		img.attr("src", "assets/img/aoc_icons/shoes.png");
  	else
     	img.attr("src", "assets/img/aoc_icons/" + array[string] + ".png");
 		div.append(img);
+	div.append(paragraph); 
 		mainDiv.append(div);
 	return mainDiv;
 }
