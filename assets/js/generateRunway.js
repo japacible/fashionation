@@ -75,6 +75,8 @@ function populateLoop(string, array) {
 		element.append(img);
 		var parent = "#" + string + "s";
 		$(parent).append(element);
+		element.append("<p class='icon-description'>" + name + "</p>");
+
 	}
 }
 
