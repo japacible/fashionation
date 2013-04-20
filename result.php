@@ -6,9 +6,9 @@
 								$file_type == "image/jpg" || 
 								$file_type == "image/png")) {
 	move_uploaded_file($_FILES["image"]["tmp_name"], "uploadedimages/$name");
-		header('Location: runway.php?sucess=true');
+		header('Location: runway.php?success=true');
 	} else {
-		header('Location: fileupload.php?sucess=false');
+		header('Location: fileupload.php?success=false');
 	}
 ?>
 
