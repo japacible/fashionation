@@ -171,13 +171,7 @@ function concatenateOutfit(generatedOutfit) {
 	//var concat =(String) ("" + generatedOutfit["top1"] + "" +  generatedOutfit["top2"] + "" + generatedOutfit["bottom"] + "" + generatedOutfit["shoe"]);
 	var image = $("<img>");
 	var imageLocation = "assets/img/outfits/" + concatenateOutfit(generatedOutfit) + ".jpg";
-	var exists = ImageExist(imageLocation);
-	if(exists) {
-		image.attr("src", imageLocation);
-	} else {
-		image = $("<p>");
-		image.text("Oops, looks like we don't have a photo of that combination yet!");
-	}
+  image.attr("src", imageLocation);
 	$("#generated-outfit-image").prepend(image);
 
 	addToMainDiv("top1", generatedOutfit);
