@@ -104,6 +104,8 @@ function randomOutfit() {
 
 function displayOutfit(generatedOutfit) {
 	generatedOutfit =  $.parseJSON(generatedOutfit);
+	var index = Math.floor(Math.random() * generatedOutfit.length);
+	generatedOutfit = generatedOutfit[index];
 
 	$(".main-content").hide();
 	$(".extra-content").hide();
