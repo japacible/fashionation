@@ -133,6 +133,7 @@ nav > div {
   margin: 10px 10px 10px 0px;
   float: left;
   opacity: .7;
+
 }
 
  h3 {
@@ -152,4 +153,53 @@ nav > div {
   float: left;
   margin-top: 5px;
   text-align: center;
+}
+
+#suggestion {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 25px;
+}
+
+.article {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    margin: 25px;
+    color: black; /*these are going to be images; no text*/
+}
+
+#model {
+    float: right;
+}
+
+#speechbub {
+    border-radius: 20px;
+    background-color: white;
+    height: 300px;
+    color: black;
+    padding: 45px;
+    margin: 45px;
+}
+
+#tutorial {
+    background-color: white;
+    color: black;
+}
+
+#tutorialname {
+    height: 50px;
+    font-size: 36px;
+    margin: 15px;
+    padding-top: 25px;
+}
+
+#tutorialcontent {
+    height: 500px;
+    font-size: 16px;
+    margin: 15px;
+}
+
+.tutorial-group {
+  margin: 15px;
 }
