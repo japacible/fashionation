@@ -12,7 +12,15 @@ $(document).ready(function() {
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=shoes", populateShoes);
 	$("#generate").click(generateOutfit);
 	$("#random").click(randomOutfit);
+	if($("#errorMessageUpload")) {
+		setTimeout(hideErrorMessage, 2000);
+		//$("#SuccessMessageUpload").click(hideErrorMessage);
+	}
 });
+
+function hideErrorMessage() {
+	$("#errorMessageUpload").hide();
+}
 
 function populateShirts(shirtObj) {
 	shirtObj = $.parseJSON(shirtObj);
