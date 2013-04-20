@@ -24,6 +24,8 @@ function getWeatherStatus() {
 	if(!weatherResult) {
 		getWeather();
 	}
+	console.log("Icon in geol:");
+	console.log(icon);
 	return icon;
 }
 
