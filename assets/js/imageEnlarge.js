@@ -14,14 +14,14 @@ function hideMe(obj) {
 }
 
 $(document).ready(function() {
-	if($("#SuccessMessageUpload")) {
+	if($("#errorMessageUpload")) {
 		//$("#SuccessMessageUpload").click(hideMessage);
 		setTimeout(hideMessage, 2000);
 	}
 });
 
 function hideMessage() {
-	$("#SuccessMessageUpload").hide();
+	$("#errorMessageUpload").hide();
 }
 
 
