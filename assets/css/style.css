@@ -323,12 +323,21 @@ h4 {
 #outfit-buttons #random {
   float: right;
 }
-
 .outfit-button {
+  float: left;
+}
+
+.outfit-button, #upload-image-button {
   padding: 7px 10px;
   background-color: #634b34;
-  float: left;
   border-radius: 3px;
+}
+
+#upload-image-button {
+  font-family: "Gentium Basic";
+  border: 0 none;
+color: white;
+       font-size: 11pt;
 }
 
 #generate:hover, #random:hover {
@@ -398,4 +407,16 @@ h4 {
   text-align: center;
   font-family: "FolksLightRegular";
   text-transform: lowercase;
+}
+
+#wardrobe h4 {
+  padding:0;
+}
+
+section h3 {
+  padding-bottom: 20px;
+}
+
+section {
+  margin-bottom: 40px;
 }
