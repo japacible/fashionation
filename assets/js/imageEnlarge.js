@@ -1,6 +1,6 @@
 function showImage(imgName) {
     document.getElementById('largeImg').src = imgName;
-    document.getElementById('largeImgPanel').style.visibility = 'visible';
+    $("#largeImgPanel").show();
     unselectAll();
 }
 
