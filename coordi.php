@@ -77,14 +77,14 @@
                   this outfit is to provided give a general idea of the outfit; colors
                   and styles will not match <strong>exactly</strong>
                 </p>
-                <div id="generated-outfit-buttons">
+<!--                <div id="generated-outfit-buttons">
                   <div class="outfit-button" id="return-to-coordi">
                     back
                   </div>
                   <div class="outfit-button" id="generate-another">
                     coordinate
                   </div>
-                </div>
+                </div>-->
               </div>
             </div>
           </div>
