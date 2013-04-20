@@ -124,13 +124,8 @@ nav h2 {
 }
 
 nav > div {
-  width: 468px;
+  width: 470px;
   float: left;
-}
-
-nav .vertical-ruler {
-  width: 2px;
-  background-color: black;
 }
 
 .nav-shadow {
