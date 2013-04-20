@@ -135,6 +135,6 @@ function addToMainDiv(mainDiv, string, array) {
 	div.addClass("large");
 	img.attr("src", array[string]);
 	div.append(img);
-	holdAllTheImages.append(div);
-	return holdAllTheImages;
+	mainDiv.append(div);
+	return mainDiv;
 }
