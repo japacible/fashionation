@@ -6,65 +6,7 @@
 	<script src="http://students.washington.edu/apacible/geo/modernizr-2.5.2.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 
-	<script type="text/javascript">
-		var latitude = 0;
-		var longitude = 0;
-
-		function useGeolocation(position) {
-			latitude = position.coords.latitude;
-			longitude = position.coords.longitude;
-	
-			$("#latitude").html(latitude);
-			$("#longitude").html(longitude);
-
-			alert(latitude + "," + longitude);
-		}
-		
-		function onGeolocationError(error) {
-			alert("Geolocation error - code: " + error.code + " message : " + error.message);
-		}
-		
-		$(document).ready(function(){
-			if(Modernizr.geolocation) {
-				$("#geolocation").html("is supported.");
-				navigator.geolocation.getCurrentPosition(useGeolocation, onGeolocationError);
-
-				//alert(latitude + "," + longitude);
-
-				console.log("http://api.wunderground.com/api/9dfc726c463f0923/geolookup/conditions/q/" + latitude + "," + longitude + ".json");
-
-				$.ajax({
-				  url : "http://api.wunderground.com/api/9dfc726c463f0923/geolookup/conditions/q/47.6172938,-122.32990470000001.json",
-				  dataType : "jsonp",
-				  success : function(parsed_json) {
-					  var location = parsed_json['location']['city'];
-					  var temp_f = parsed_json['current_observation']['temp_f'];
-					  var icon = parsed_json['current_observation']['icon'];
-					  alert("Current temperature in " + location + " is: " + temp_f + " and the icon is: " + icon);
-
-					  var niceWeatherIcons=["clear","cloudy","mostlycloudy","mostlysunny","partlycloudy","partlysunny", "sunny","unknown"];
-					  var rainWeatherIcons=["chancerain","chancestorms","fog","hazy","rain","tstorms","cloudy"];
-					  var badWeatherIcons=["chanceflurries","chancesleet","chancesnow","flurries","sleet", "snow"];
-
-					  if ($.inArray(icon, badWeatherIcons) > -1) {
-					  	alert("bad weather.");
-					  	//return 2;
-					  } else if ($.inArray(icon, rainWeatherIcons) > -1) {
-					  	alert("rainy weather.");
-					  	//return 1;
-					  } else {
-					  	alert("okay weather.");
-					  	//return 0;
-					  }
-					}
-				});
-			} else {
-				$("#geolocation").html("is not supported.");
-				//return 0;
-			}
-			
-		});
-	</script>
+	<script type="text/javascript" href="geolocation.js"></script>
 </head>
 <body>
 
