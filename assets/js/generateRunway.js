@@ -3,7 +3,6 @@ var selected = {"top" : [],
 				"shoe" : []
 			   };
 
-var weather = "";
 
 $(document).ready(function() {
 	$(".main-content-2").hide();
@@ -12,36 +11,13 @@ $(document).ready(function() {
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=shoes", populateShoes);
 	$("#generate").click(generateOutfit);
 	$("#random").click(randomOutfit);
-	getWeather();
-	setTimeout(populateWeatherStats, 700);
-	setTimeout(populateWeatherStats, 1400);
 	if($("#errorMessageUpload")) {
-		setTimeout(hideErrorMessage, 300);
+		setTimeout(hideErrorMessage, 2000);
 	}
 });
 
-functoin hideErrorMessage() {
+function hideErrorMessage() {
 	$("#errorMessageUpload").hide();
-}
-
-function populateWeatherStats() {
-	getWeather();
-
-	var code = getWeatherCode();
-	var temp = getTemperature();
-	var stat = getWeatherStatus();
-	var loc = getCity();
-	console.log("code");
-	console.log(code);
-	console.log("temp");
-	console.log(temp);
-	console.log("stat");
-	console.log(stat);
-	console.log('loc');
-	console.log(loc);
-	$("#city").text(loc);
-	$("#stat").text(stat);
-	$("#temp").text(temp);
 }
 
 function populateShirts(shirtObj) {
@@ -146,11 +122,11 @@ function generateOutfit() {
 	}
 
 	$.get("http://pingyang.me/fashionation/api/getoutfits.php?top1=" + top1_id + "&top2=" + top2_id + 
-			"&bottom=" + bottom_id + "&shoe=" + shoe_id + "&weather=" + weather, displayOutfit);
+			"&bottom=" + bottom_id + "&shoe=" + shoe_id , displayOutfit);
 }
 
 function randomOutfit() {
-	$.get("http://pingyang.me/fashionation/api/getoutfits.php?top1=&top2=&bottom=&shoe=&weather=" + weather, displayOutfit);
+	$.get("http://pingyang.me/fashionation/api/getoutfits.php?top1=&top2=&bottom=&shoe=", displayOutfit);
 }
 
 function displayOutfit(generatedOutfit) {
