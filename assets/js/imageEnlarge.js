@@ -28,7 +28,7 @@ function likePhoto() {
     var image = $("#largeImg").attr("src").substring(15).substring(-4);
     $.get("http://pingyang.me/fashionation/api/pic_vote.php?pic_name=" + image + "&vote=1");
     alert("liked!");
-    hideMe($("#largeImgPane"));
+    $("#largeImgPanel").hide();
 }
 
 function dislikePhoto() {
@@ -36,7 +36,7 @@ function dislikePhoto() {
     var image = $("#largeImg").attr("src").substring(15).substring(-4);
     $.get("http://pingyang.me/fashionation/api/pic_vote.php?pic_name=" + image + "&vote=0");
     alert("disliked!");
-    hideMe($("#largeImgPane"));
+    $("#largeImgPanel").hide();
 }
 
 function hideMessage() {
