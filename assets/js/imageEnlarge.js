@@ -19,6 +19,8 @@ $(document).ready(function() {
 		setTimeout(hideMessage, 2000);
 	}
 
+    $("#userimages img").click(function() {$("#largeImgPanel").show();});
+
     $("#dislike").click(dislikePhoto);
     $("#like").click(likePhoto);
 });
