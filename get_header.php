@@ -25,10 +25,10 @@
             <h2><a href="home.php" title="Home">HOME</a></h2>
           </div>
           <div>
-            <h2><a href="coordi.php" title="Outfit Suggestor">COORDI</a></h2>
+            <h2><a href="resources.php" title="Tutorials">BASICS</a></h2>
           </div>
           <div>
-            <h2><a href="resources.php" title="Tutorials">BASICS</a></h2>
+            <h2><a href="coordi.php" title="Outfit Suggestor">COORDI</a></h2>
           </div>
           <div>
             <h2><a href="runway.php" title="Runway">RUNWAY</a></h2>

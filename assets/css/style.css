@@ -80,6 +80,7 @@ a {
 
 #front-page-image {
   margin-top: 30px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -241,9 +242,9 @@ h3 {
     border-radius: 20px;
     background-color: white;
     color: black;
-    padding: 45px;
+    padding: 35px;
     margin-right: 80px;
-    margin-left: 280px;
+    margin-left: 130px;
     margin-top: 50px;
     font-size: 16pt;
     color: #634b34;
@@ -497,4 +498,8 @@ padding: 1em;
 #tutorialcontent p {
   margin-bottom: 10px;
 
+}
+
+#speechbub p{
+padding: 5px 0;
 }
