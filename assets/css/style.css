@@ -254,3 +254,11 @@ nav .vertical-ruler {
 .youtube {
   text-align: center;
 }
+
+.clothing:hover {
+  opacity: 1;
+}
+
+.highlight {
+  opacacity: 1;
+}
