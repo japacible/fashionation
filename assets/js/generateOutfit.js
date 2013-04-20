@@ -154,11 +154,25 @@ function displayOutfit(generatedOutfit) {
 	$(".extra-content").hide();
 	$(".main-content-2").show();
 
+function concatenateOutfit(generatedOutfit) {
+  var concat = "";
+  if (generatedOutfit["top1"])
+    concat += generatedOutfit["top1"];
+  if (generatedOutfit["top2"])
+    concat += generatedOutfit["top2"];
+  if (generatedOutfit["bottom"])
+    concat += generatedOutfit["bottom"];
+  if (generatedOutfit["shoes"])
+    concat += generatedOutfit["shoes"];
+
+  return concat;
+}
+
 	// fill in images with selections
 	var holdAllTheImages = $("#generated-outfit-aoc");
-	var concat =(String) ("" + generatedOutfit["top1"] + "" +  generatedOutfit["top2"] + "" + generatedOutfit["bottom"] + "" + generatedOutfit["shoe"]);
+	//var concat =(String) ("" + generatedOutfit["top1"] + "" +  generatedOutfit["top2"] + "" + generatedOutfit["bottom"] + "" + generatedOutfit["shoe"]);
 	var image = $("<img>");
-	image.attr("src", concat + ".jpg");
+	image.attr("src", "assets/img/outfits/" + concatenateOutfit(generatedOutfit) + ".jpg");
 	$("#generated-outfit-image").prepend(image);
 
 	holdAllTheImages = addToMainDiv(holdAllTheImages, "top1", generatedOutfit);
