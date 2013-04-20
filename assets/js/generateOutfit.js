@@ -111,13 +111,14 @@ function displayOutfit(generatedOutfit) {
 
 	// fill in images with selections
 	var holdAllTheImages = $("#generated-outfit-aoc");
+	console.log("OUTFIT GENERATED!");
 	console.log(generatedOutfit);
-	alert(generatedOutfit["top1"]);
-	alert(generatedOutfit["top2"]);
-	alert(generatedOutfit["shoe"]);
-	alert(generatedOutfit["bottom"]);
+	console.log(generatedOutfit["top1"]);
+	console.log(generatedOutfit["top2"]);
+	console.log(generatedOutfit["shoe"]);
+	console.log(generatedOutfit["bottom"]);
 	var concat =(String) ("" + generatedOutfit["top1"] + "" +  generatedOutfit["top2"] + "" + generatedOutfit["bottom"] + "" + generatedOutfit["shoe"]);
-	alert(concat);
+	console.log(concat);
 	var image = $("<img>");
 	image.attr("src", concat + ".jpg");
 	$("#generated-outfit-image").prepend(image);
