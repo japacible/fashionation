@@ -439,20 +439,10 @@ section {
   margin-top: 25px;
 }
 
-#voting-buttons {
-  width: 170px;
-}
-
 #voting-buttons #dislike {
   float: left;
-  margin-right: 10px;
 }
 
 #voting-buttons #like {
   float: right;
-  margin-left: 10px;
-}
-
-.outfit-button {
-  float: left;
 }
