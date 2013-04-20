@@ -1,7 +1,15 @@
 function showImage(imgName) {
     document.getElementById('largeImg').src = imgName;
-    document.getElementById('largeImgPanel').style.visibility = 'visible';
+    $.get("http://pingyang.me/fashionation/api/get_vote.php?pic_name=" + imgName.substring(15), putVoteResults);
+    $("#largeImgPanel").css("visibility", "visible");
     unselectAll();
+}
+
+function putVoteResults(results) {
+    var likes = parseInt(results.substring(0,1));
+    var dislikes = parseInt(results.substring(2));
+    $("#currentLikes").text(likes);
+    $("#currentDislikes").text(dislikes);
 }
 
 function unselectAll() {
@@ -19,6 +27,8 @@ $(document).ready(function() {
 		setTimeout(hideMessage, 2000);
 	}
 
+ //   $("#userimages img").click(function() { alert("CLICKED"); $("#largeImgPanel").show();});
+
     $("#dislike").click(dislikePhoto);
     $("#like").click(likePhoto);
 });
@@ -27,16 +37,14 @@ function likePhoto() {
     event.stopPropagation();
     var image = $("#largeImg").attr("src").substring(15).substring(-4);
     $.get("http://pingyang.me/fashionation/api/pic_vote.php?pic_name=" + image + "&vote=1");
-    alert("liked!");
-    $("#largeImgPanel").hide();
+    $("#largeImgPanel").css("visibility", "hidden");
 }
 
 function dislikePhoto() {
     event.stopPropagation();
     var image = $("#largeImg").attr("src").substring(15).substring(-4);
     $.get("http://pingyang.me/fashionation/api/pic_vote.php?pic_name=" + image + "&vote=0");
-    alert("disliked!");
-    $("#largeImgPanel").hide();
+    $("#largeImgPanel").css("visibility", "hidden");
 }
 
 function hideMessage() {

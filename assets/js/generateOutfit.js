@@ -136,9 +136,12 @@ function generateOutfit() {
 	if(selected["shoe"][0]) {
 		shoe_id = selected["shoe"][0];
 	}
-
-	$.get("http://pingyang.me/fashionation/api/getoutfits.php?top1=" + top1_id + "&top2=" + top2_id + 
+	if(top1_id == ""  && top2_id == "" && bottom_id == "" && shoe_id == "") {
+	
+	} else {
+		$.get("http://pingyang.me/fashionation/api/getoutfits.php?top1=" + top1_id + "&top2=" + top2_id + 
 			"&bottom=" + bottom_id + "&shoe=" + shoe_id + "&weather=" + code, displayOutfit);
+	}
 }
 
 function randomOutfit() {
