@@ -1,4 +1,4 @@
-<?php function header() { ?>
+<?php function top() { ?>
 	<!DOCTYPE html>
 	<html>
 	<head>
@@ -22,7 +22,7 @@
 
 <?php } 
 
-function footer() { ?>
+function bottom() { ?>
 		</div>  <!-- close main div -->
 	</body>
 </html>
