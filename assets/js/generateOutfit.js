@@ -42,7 +42,7 @@ function populateLoop(string, array) {
 		element.click(highlight);
 
 		var img = $("<img>");
-		img.attr("src", "assets/img/icons/clothing/" + id);
+		img.attr("src", "assets/img/icons/clothing/" + id + ".jpg");
 
 		element.append(img);
 		var parent = "#" + string + "s";
