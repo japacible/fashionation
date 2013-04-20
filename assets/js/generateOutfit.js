@@ -12,7 +12,7 @@ $(document).ready(function() {
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=shoes", populateShoes);
 	$("#generate").click(generateOutfit);
 	$("#random").click(randomOutfit);
-	populateWeatherStats();
+	setTimeout(populateWeatherStats, 500);
 });
 
 function populateWeatherStats() {
