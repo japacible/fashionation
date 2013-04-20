@@ -2,9 +2,13 @@
 	<!DOCTYPE html>
 	<html>
 	<head>
-		<title>fashionation</title>
-		<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/template.css" rel="stylesheet" type="text/css" />
+		<title>FASHIONATION</title>
+	    <link href="assets/css/bootstrap.min.css" type:"text/css" rel="stylesheet" />
+	    <link href="assets/css/bootstrap-responsive.css" type:"text/css" rel="stylesheet" />
+	    <link href="assets/css/folksfont.css" type:"text/css" rel="stylesheet" />
+	    <link href="assets/css/style.css" type:"text/css" rel="stylesheet" />
+	    <script src="http://code.jquery.com/jquery-latest.js"></script>
+	    <script src="assets/js/bootstrap.min.js"></script>
 	</head>
 
 	<body>
