@@ -108,6 +108,7 @@ function displayOutfit(generatedOutfit) {
 
 	// fill in images with selections
 	var holdAllTheImages = $("<div>");
+	holdAllTheImages.attr("id", "LOLWAT");
 
 	var concat = generatedOutfit["top1"] + generatedOutfit["top2"] + generatedOutfit["bottom"] + generatedOutfit["shoe"];
 	var concatDiv = $("<div>");
