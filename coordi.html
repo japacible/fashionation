@@ -5,16 +5,20 @@
     <link href="assets/css/reset.css" type="text/css" rel="stylesheet" />
     <link href="assets/css/folksfont.css" type="text/css" rel="stylesheet" />
     <link href="assets/css/style.css" type="text/css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
-      <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
       <script src="assets/js/generateOutfit.js"></script>
       <div class="container">
         <header>
           <h1>fashionation</h1>
         </header>
         <nav>
+          <div>
+            <h2><a href="home.html" title="Home">HOME</a></h2>
+          </div>
           <div>
             <h2><a href="coordi.html" title="Outfit Suggestor">COORDI</a></h2>
           </div>
@@ -39,11 +43,13 @@
                 <h3>SHOES</h3>
               </div>
             </div>
-            <div class="outfit-button" id="generate">
-              generate
-            </div>
-            <div class="outfit-button" id="random">
-              random
+            <div id="outfit-buttons">
+              <div class="outfit-button" id="generate">
+                coordinate
+              </div>
+              <div class="outfit-button" id="random">
+                random
+              </div>
             </div>
           </div> <!--end main-content -->
           <div class="extra-content">
@@ -53,23 +59,32 @@
           </div><!-- end extra content-->
 
           <div class="main-content-2">
-            <div class="generated-outfit" id="generated-outfit-aoc">
-            </div>
-            <div class="generated-outfit" id="generated-outfit-image">
-              <img src="#" alt="Similar outfit" />
-              <p id="outfit-disclaimer">
-                this outfit is to give a general idea of what a coordination could look like.
-                it may not match exactly what you have.
-              </p>
-            </div>
-            <div class="oufit-button" id="up-vote">
-            </div>
-            <div class="oufit-button" id="down-vote">
-            </div>
-            <div class="oufit-button" id="">
+            <div class="generated-outfit">
+              <div id="generated-outfit-aoc">
+                <div class="clothing large">
+                </div>
+                <div class="clothing large">
+                </div>
+                <div class="clothing large">
+                </div>
+              </div>
+              <div id="generated-outfit-image">
+                <img src="#" alt="Similar outfit" />
+                <p id="generated-disclaimer">
+                  this outfit is to provided give a general idea of the outfit; colors
+                  and styles will not match <strong>exactly</strong>
+                </p>
+                <div id="generated-outfit-buttons">
+                  <div class="outfit-button" id="love">
+                    &lt;3
+                  </div>
+                  <div class="outfit-button" id="generate-another">
+                    coordinate
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
         </div> <!-- end main container -->
       </div>
   </body>
