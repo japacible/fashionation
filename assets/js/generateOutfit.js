@@ -63,7 +63,6 @@ function populateLoop(string, array) {
 		element.mouseenter(hoverPreview);
 
 		var img = $("<img>");
-    alert(string);
     if (string == "shoe")
       img.attr("src", "assets/img/aoc_icons/shoes.png");
     else
