@@ -24,11 +24,13 @@ $(document).ready(function() {
 });
 
 function likePhoto() {
+    event.stopPropagation();
     var image = $("#largeImg").attr("src");
     alert("i like this");
 }
 
 function dislikePhoto() {
+    event.stopPropagation();
     var image = $("#largeImg").attr("src");
     alert("I don't like this");
 }
