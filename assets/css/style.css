@@ -447,3 +447,19 @@ section {
 #outfit-buttons #like {
   float: right;
 }
+
+#facebooklogin {
+  font-size: 24px;
+  font-weight: 2pt;
+  color: #769bd1;
+  text-align: center;
+  font-family: "FolksLightRegular";
+  text-transform: lowercase;
+}
+
+#infoblurb {
+  font-size: 16px;
+  text-align: center;
+  font-family: "FolksLightRegular";
+  text-transform: lowercase;
+}
