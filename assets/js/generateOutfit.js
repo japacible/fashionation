@@ -7,7 +7,7 @@ var weather = "";
 
 $(document).ready(function() {
 	$(".main-content-2").hide();
-	weather = getWeatherCode();
+	weather = 0; // getWeatherCode(); When jen's stuff is done!! 
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=tops", populateShirts);
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=bottoms", populatePants);
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=shoes", populateShoes);
@@ -42,7 +42,7 @@ function populateLoop(string, array) {
 		element.click(highlight);
 
 		var img = $("<img>");
-		img.attr("src", "assets/img/icons/clothing/" + id);
+		img.attr("src", "assets/img/icons/clothing/" + id + ".jpg");
 
 		element.append(img);
 		var parent = "#" + string + "s";
