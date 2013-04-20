@@ -162,8 +162,8 @@ function concatenateOutfit(generatedOutfit) {
     concat += generatedOutfit["top2"];
   if (generatedOutfit["bottom"])
     concat += generatedOutfit["bottom"];
-  if (generatedOutfit["shoes"])
-    concat += generatedOutfit["shoes"];
+  if (generatedOutfit["shoe"])
+    concat += generatedOutfit["shoe"];
 
   return concat;
 }
