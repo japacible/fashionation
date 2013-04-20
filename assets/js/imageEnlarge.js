@@ -1,5 +1,4 @@
 function showImage(imgName) {
-    alert("CLICKED");
     document.getElementById('largeImg').src = imgName;
     $("#largeImgPanel").css("visibility", "visible");
     unselectAll();
