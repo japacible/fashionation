@@ -12,11 +12,13 @@ $(document).ready(function() {
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=shoes", populateShoes);
 	$("#generate").click(generateOutfit);
 	$("#random").click(randomOutfit);
+	getWeather();
 	setTimeout(populateWeatherStats, 700);
 });
 
 function populateWeatherStats() {
-	getWeather(); 
+	getWeather();
+
 	var code = getWeatherCode();
 	var temp = getTemperature();
 	var stat = getWeatherStatus();
