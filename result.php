@@ -6,9 +6,11 @@
 								$file_type == "image/jpg" || 
 								$file_type == "image/png")) {
 	move_uploaded_file($_FILES["image"]["tmp_name"], "uploadedimages/$name");
-	print("saved! at /uploadedimages/$name"); 
+	//print("saved! at /uploadedimages/$name"); 
 	} else {
-		print("bad file type or size");
+		//print("bad file type or size");
 	}
+
+	header('Location: coordi.html');
 ?>
 

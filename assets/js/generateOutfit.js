@@ -167,7 +167,8 @@ function concatenateOutfit(generatedOutfit) {
 
   return concat;
 }
-
+	console.log("LOOOK HEREEEE");
+	console.log(generatedOutfit);
 	// fill in images with selections
 	var holdAllTheImages = $("#generated-outfit-aoc");
 	//var concat =(String) ("" + generatedOutfit["top1"] + "" +  generatedOutfit["top2"] + "" + generatedOutfit["bottom"] + "" + generatedOutfit["shoe"]);
@@ -185,6 +186,8 @@ function concatenateOutfit(generatedOutfit) {
 
 function addToMainDiv(mainDiv, string, array) {
 	var img = $("<img>");
+	var paragraph = $("<p>");
+	paragraph.text(array[string]);
 	var div = $("<div>");
 	div.addClass("clothing");
 	div.addClass("large");
@@ -193,6 +196,7 @@ function addToMainDiv(mainDiv, string, array) {
   else
     img.attr("src", "assets/img/aoc_icons/" + array[string] + ".png");
 	div.append(img);
+	div.append(paragraph);
 	mainDiv.append(div);
 	return mainDiv;
 }
