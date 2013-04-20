@@ -33,6 +33,12 @@
             <div class="corgi-help-speech">
               <div class="aoc-preview"> 
                 <!-- Katlyn put the paragraph of what the Display name is --> 
+                <p id="aoc-help">
+                  Hover over the articles of clothing to get a preview of what it looks like!
+                </p>
+                <div class="aoc-wrapper">
+                <img id="aoc-help-image" src="" alt="" />
+                </div>
                 <p>
                   Time to <strong>coordi</strong>nate some awesome outfits! There
                   are two different types ways of generating outfits!
@@ -46,7 +52,7 @@
                     2. Select <strong>random</strong> for a completely random outfit!
                   </li >
                 </ol>
-                <p id="aoc-help">
+                <p>
                   Hover over the articles of clothing to get a preview of what it looks like!
                 </p>
                 <img id="aoc-help-image" src="" alt="" />
@@ -72,8 +78,8 @@
                   and styles will not match <strong>exactly</strong>
                 </p>
                 <div id="generated-outfit-buttons">
-                  <div class="outfit-button" id="love">
-                    &lt;3
+                  <div class="outfit-button" id="return-to-coordi">
+                    back
                   </div>
                   <div class="outfit-button" id="generate-another">
                     coordinate

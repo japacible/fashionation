@@ -152,7 +152,7 @@ nav > div {
   height: 115px;
   margin: 10px 10px 10px 0px;
   float: left;
-  opacity: .7;
+  opacity: .55;
 }
 
 .main-content .clothing img {
@@ -302,10 +302,13 @@ h4 {
 }
 
 .clothing:hover {
+  cursor: pointer;
   opacity: 1;
+           font-weight: bold;
 }
 
 .highlight {
+  font-weight: bold;
   opacity: 1 !important;
 }
 
@@ -397,7 +400,7 @@ color: white;
 
 #generated-outfit-buttons {
   overflow: hidden;
-  width: 134px;
+  width: 150px;
   margin: 10px auto;
 }
 
