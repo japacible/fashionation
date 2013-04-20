@@ -7,16 +7,10 @@ var temp_f = null;
 var icon = null;
 
 function getWeatherCode() {
-	if(!weatherResult) {
-		getWeather();
-	}
 	return weatherResult;
 }
 
 function getTemperature() {
-	if(!weatherResult) {
-		getWeather();
-	}
 	return temp_f;
 }
 
@@ -75,9 +69,9 @@ function checkUpdate() {
 }
 
 function ajaxSuccess(parsed_json) {
-	var location = parsed_json['location']['city'];
-	var temp_f = parsed_json['current_observation']['temp_f'];
-	var icon = parsed_json['current_observation']['icon'];
+	cityLocation = parsed_json['location']['city'];
+	temp_f = parsed_json['current_observation']['temp_f'];
+	icon = parsed_json['current_observation']['icon'];
 	//alert("Current temperature in " + location + " is: " + temp_f + " and the icon is: " + icon);
 
 	var niceWeatherIcons=["clear","cloudy","mostlycloudy","mostlysunny","partlycloudy","partlysunny", "sunny","unknown"];
