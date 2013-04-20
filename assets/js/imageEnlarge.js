@@ -1,11 +1,7 @@
 function showImage(imgName) {
     document.getElementById('largeImg').src = imgName;
-    showLargeImagePanel();
-    unselectAll();
-}
-
-function showLargeImagePanel() {
     document.getElementById('largeImgPanel').style.visibility = 'visible';
+    unselectAll();
 }
 
 function unselectAll() {
@@ -15,4 +11,10 @@ function unselectAll() {
 
 function hideMe(obj) {
     obj.style.visibility = 'hidden';
+}
+
+
+
+function showLargeImagePanel() {
+    document.getElementById('largeImgPanel').style.visibility = 'visible';
 }
