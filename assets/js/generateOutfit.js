@@ -167,7 +167,7 @@ function concatenateOutfit(generatedOutfit) {
 
   return concat;
 }
-
+	console.log(generateOutfit);
 	// fill in images with selections
 	var holdAllTheImages = $("#generated-outfit-aoc");
 	//var concat =(String) ("" + generatedOutfit["top1"] + "" +  generatedOutfit["top2"] + "" + generatedOutfit["bottom"] + "" + generatedOutfit["shoe"]);
@@ -186,7 +186,7 @@ function concatenateOutfit(generatedOutfit) {
 function addToMainDiv(mainDiv, string, array) {
 	var img = $("<img>");
 	var paragraph = $("<p>");
-	p.text(array[string]);
+	paragraph.text(array[string]);
 	var div = $("<div>");
 	div.addClass("clothing");
 	div.addClass("large");
