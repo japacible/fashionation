@@ -63,7 +63,7 @@ function populateLoop(string, array) {
 		element.mouseenter(hoverPreview);
 
 		var img = $("<img>");
-		img.attr("src", "assets/img/icons/clothing/" + id + ".jpg");
+		img.attr("src", "assets/img/aoc_icons/" + id + ".png");
 		img.attr("alt", name);
 
 		element.append(img);
