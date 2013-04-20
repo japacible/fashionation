@@ -6,8 +6,8 @@ function showImage(imgName) {
 }
 
 function putVoteResutls(results) {
-    int likes = parseInt(results.substring(0,1));
-    int dislikse = parseInt(results.substring(2));
+    var likes = parseInt(results.substring(0,1));
+    var dislikse = parseInt(results.substring(2));
     $("#currentLikes").text(likes);
     $("#currentDislikes").text(dislikes);
 }
