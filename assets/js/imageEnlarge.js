@@ -24,6 +24,7 @@ $(document).ready(function() {
 });
 
 function likePhoto() {
+    alert("hi");
     event.stopPropagation();
     var image = $("#largeImg").attr("src");
     alert("i like this");
