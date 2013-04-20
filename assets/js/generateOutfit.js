@@ -100,5 +100,5 @@ function randomOutfit() {
 function displayOutfit() {
 	alert("here");
 	$(".mainContent").hide();
-	$("..main-content-2").show();
+	$(".main-content-2").show();
 }
