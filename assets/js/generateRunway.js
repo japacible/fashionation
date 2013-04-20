@@ -11,8 +11,6 @@ $(document).ready(function() {
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=shoes", populateShoes);
 	$("#generate").click(generateOutfit);
 	$("#random").click(randomOutfit);
-	setTimeout(populateWeatherStats, 700);
-	setTimeout(populateWeatherStats, 1400);
 	if($("#errorMessageUpload")) {
 		setTimeout(hideErrorMessage, 300);
 	}
