@@ -78,12 +78,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-  background-color: grey;
+  background-image: url('../img/fashionation_banner.jpg');
+  background-repeat: x-repeat;
+
 }
 
 h1 {
-  padding-top: 55px;
-  padding-bottom: 55px;
+  padding: 40px 0;
   font-weight: grey;
   text-align: center;
   font-size: 56pt;
@@ -97,28 +98,32 @@ nav h2 {
   font-size: 20pt;
 }
 
-nav div {
-  background-color: blue;
-  box-shadow: 0px 5px 5px grey;
+nav {
+  overflow: hidden;
 }
 
 .container {
+  border: #a3a3a3 solid 2px;
   width: 940px;
   margin: 0 auto;
 }
 
 nav > div {
   width: 470px;
+  background-color: #24303a;
   float: left;
 }
 
 .mainContent {
   clear: both;
-  margin-top: 90px;
+  margin-top: 30px;
+  overflow: hidden;
+  background-image: url('../img/wood_background.jpg');
 }
 
 #wardrobe {
   width: 600px;
+  float: left;
 }
 
 .clothing {
@@ -138,4 +143,13 @@ nav > div {
 .article-of-clothing {
   overflow: hidden;
   margin-bottom: 20px;
+}
+
+.aoc-preview {
+  width: 340px;
+  padding: 20px 0;
+  background-color: grey;
+  float: left;
+  margin-top: 5px;
+  text-align: center;
 }
