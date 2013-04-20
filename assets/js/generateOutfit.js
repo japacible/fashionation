@@ -185,21 +185,28 @@ function concatenateOutfit(generatedOutfit) {
 }
 
 function addToMainDiv(mainDiv, string, array) {
-	var img = $("<img>");
-	var paragraph = $("<p>");
-	paragraph.text(array[string]); // TODO use phrazy's  
 	var div = $("<div>");
 	div.addClass("special");
 	div.addClass("clothing");
 	div.addClass("large");
+
+	var img = $("<img>");	
+	// Look up full name
+	$.get("http://pingyang.me/fashionation/api/gettable.php?table=" + string + "s&id=" + array[string], function() {populateParagraph(div);});
+	
   if (string == "shoe")
     img.attr("src", "assets/img/aoc_icons/shoes.png");
   else
     img.attr("src", "assets/img/aoc_icons/" + array[string] + ".png");
 	div.append(img);
-	div.append(paragraph);
 	mainDiv.append(div);
 	return mainDiv;
+}
+
+function populateParagraph(div) {
+	var paragraph = $("<p>");
+	paragraph.text(array[string]); // TODO use phrazy's 
+	div.append(paragraph); 
 }
 
 function hoverPreview() {
