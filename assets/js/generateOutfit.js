@@ -137,7 +137,7 @@ function generateOutfit() {
 		shoe_id = selected["shoe"][0];
 	}
 	if(top1_id == ""  && top2_id == "" && bottom_id == "" && shoe_id == "") {
-		randomOutfit();
+	
 	} else {
 		$.get("http://pingyang.me/fashionation/api/getoutfits.php?top1=" + top1_id + "&top2=" + top2_id + 
 			"&bottom=" + bottom_id + "&shoe=" + shoe_id + "&weather=" + code, displayOutfit);
