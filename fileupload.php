@@ -10,26 +10,28 @@
                     <h3>Upload an image:</h3>
                   <input type="file" name="image" />
                   <input id="upload-image-button" type="submit" value="upload image" />
-                </form>
-              </section>
-							<!--Wardrobe-->
-	            <div id="wardrobe">
-                <section>
-                  <h3>What are you wearing?</h3>
-	              <div class="article-of-clothing" id="tops">
-	              	<h4>TOPS</h4>
-	                <p id="tops-error" class="wardrobe-error">You cannot select more than two tops.</p>
-	              </div>
-	            <div class="article-of-clothing" id="bottoms">
-	                <h4>BOTTOMS</h4>
-	                <p id="bottoms-error" class="wardrobe-error">You cannot select more than one bottom.</p>
-	              </div>
-	              <div class="article-of-clothing" id="shoes">
-	                <h4>SHOES</h4>
-	                <p id="shoes-error" class="wardrobe-error">You cannot select more than one pair of shoes</p>
-	              </div>
-                </section>
-	            </div>
+               
+  							<!--Wardrobe-->
+  	            <div id="wardrobe">
+                  <section>
+                    <h3>What are you wearing?</h3>
+  	              <div class="article-of-clothing" id="tops">
+  	              	<h4>TOPS</h4>
+  	                <p id="tops-error" class="wardrobe-error">You cannot select more than two tops.</p>
+  	              </div>
+  	            <div class="article-of-clothing" id="bottoms">
+  	                <h4>BOTTOMS</h4>
+  	                <p id="bottoms-error" class="wardrobe-error">You cannot select more than one bottom.</p>
+  	              </div>
+  	              <div class="article-of-clothing" id="shoes">
+  	                <h4>SHOES</h4>
+  	                <p id="shoes-error" class="wardrobe-error">You cannot select more than one pair of shoes</p>
+  	              </div>
+                  </section>
+  	            </div>
+              
+              </form>
+            </section>
 
               <!--I want buttons like this for submit!-->
             <div id="outfit-buttons">
