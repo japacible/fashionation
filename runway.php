@@ -33,7 +33,7 @@
         <div class="main-container">
           <div class="nav-shadow">
           </div>
-          <div class="main-content" style="width: 900px !important;">
+          <div class="main-content" style="width: 900px !important; margin-right: 10px">
             <!-- End get_header -->
             <div id="runway">
               <h3>Runway</h3>
@@ -42,7 +42,8 @@
                   foreach(glob('uploadedimages/*') as $image)   
                   {     
                     //echo "Filename: " . $image . "<br />";
-                    echo "<div style=\"width: 200px; float: left\">
+                    echo "<div style=\"width: 200px; float: left; 
+                          margin-right: 10px; margin-bottom: 10px;\">
                       <img src=\"$image\" style=\"max-width: 100%;\" \/>
                       </div>";
                   }
