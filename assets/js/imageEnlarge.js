@@ -18,7 +18,23 @@ $(document).ready(function() {
 		//$("#SuccessMessageUpload").click(hideMessage);
 		setTimeout(hideMessage, 2000);
 	}
+
+    $(".outfit-button #dislike").click(dislikePhoto);
+    $(".outfit-button #like").click(likePhoto);
 });
+
+function likePhoto() {
+    alert("hi");
+    event.stopPropagation();
+    var image = $("#largeImg").attr("src");
+    alert("i like this");
+}
+
+function dislikePhoto() {
+    event.stopPropagation();
+    var image = $("#largeImg").attr("src");
+    alert("I don't like this");
+}
 
 function hideMessage() {
 	$("#errorMessageUpload").hide();

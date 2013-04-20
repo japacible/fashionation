@@ -2,6 +2,11 @@
   include "tutorial_footer.php";
   include "get_header.php";
 ?>
+  <style>
+    #dislike, #like {
+        z-index: 1003;
+    }
+  </style>
       <script src="assets/js/imageEnlarge.js"></script> 
       <script src="assets/js/generateRunway.js"></script> 
           <div class="main-content" style="width: 900px !important; margin-right: 10px">
@@ -27,22 +32,22 @@
               </div>
               <div id="largeImgPanel" onclick="hideMe(this);">
                 <img id="largeImg" style="height: 75%; margin: 0; padding: 0;" />
-                <div id="outfit-buttons">
+              </div>
+            </div>
+          </div>
+        </div>
+         <div id="outfit-buttons">
                   <div class="outfit-button" id="dislike">
                     Dislike
                   </div>
                   <div class="outfit-button" id="like">
                     Like
                   </div>
-                </div>
               </div>
-            </div>
-          </div>
-        </div>
         <?php 
               if(isset($_GET["success"])) {?>
               <div id="SuccessMessageUpload">
-                Your file was uploaded successfully! (Click this message box to hide.)
+                Your file was uploaded successfully!
               </div>
               <?php } ?>
       </div>

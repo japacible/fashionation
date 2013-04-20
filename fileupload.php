@@ -2,7 +2,7 @@
   include "get_header.php";
 ?>
 
-          <script src="assets/js/generateOutfit.js"></script>
+          <script src="assets/js/fileUpload.js"></script>
           <div class="main-content">
           	<!--File Upload-->
               <section>
@@ -97,8 +97,7 @@
           <?php 
         if(isset($_GET["success"])) {?>
         <div id="errorMessageUpload">
-          Whoops! Looks like your file didn't upload correctly. Please make sure it is either a .jpg, .jpeg, or .png. Please also make sure that the file is under 500KB. (Click this message box to hide.)
-        </div>
+          Whoops! Looks like your file didn't upload correctly. Please make sure it is either a .jpg, .jpeg, or .png. Please also make sure that the file is under 500KB. 
         <?php } ?>
               
         </div> <!-- end main container -->

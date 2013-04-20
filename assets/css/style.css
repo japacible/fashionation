@@ -470,3 +470,31 @@ section {
 .weather {
   color: #769bd1;
 }
+
+ #SuccessMessageUpload {
+position: absolute;
+top: 40%;
+bottom: 40%;
+left: 40%;
+right: 40%;
+width: 20%;
+height: 20%;
+        background-color: rgba(50,200,50,0.95);
+padding: 1em;
+ }
+
+#errorMessageUpload {
+position: absolute;
+top: 40%;
+bottom: 40%;
+left: 40%;
+right: 40%;
+width: 20%;
+height: 20%;
+background-color: rgba(200,50,50,0.95);
+padding: 1em;
+}
+#tutorialcontent p {
+  margin-bottom: 10px;
+
+}
