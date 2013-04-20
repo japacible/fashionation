@@ -15,7 +15,14 @@ $(document).ready(function() {
 	getWeather();
 	setTimeout(populateWeatherStats, 700);
 	setTimeout(populateWeatherStats, 1400);
+	if($("#errorMessageUpload")) {
+		setTimeout(hideErrorMessage, 300);
+	}
 });
+
+functoin hideErrorMessage() {
+	$("#errorMessageUpload").hide();
+}
 
 function populateWeatherStats() {
 	getWeather();
