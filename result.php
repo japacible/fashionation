@@ -11,6 +11,6 @@
 		//print("bad file type or size");
 	}
 
-	header('Location: coordi.html');
+	header('Location: runway.php');
 ?>
 
