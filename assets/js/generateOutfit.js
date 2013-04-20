@@ -104,6 +104,8 @@ function randomOutfit() {
 
 function displayOutfit(generatedOutfit) {
 	generatedOutfit =  $.parseJSON(generatedOutfit);
+	var index = Math.floor(Math.random() * generatedOutfit.length);
+	generatedOutfit = generatedOutfit[index];
 
 	$(".main-content").hide();
 	$(".extra-content").hide();
@@ -111,8 +113,14 @@ function displayOutfit(generatedOutfit) {
 
 	// fill in images with selections
 	var holdAllTheImages = $("#generated-outfit-aoc");
+	console.log("OUTFIT GENERATED!");
+	console.log(generatedOutfit);
+	console.log(generatedOutfit["top1"]);
+	console.log(generatedOutfit["top2"]);
+	console.log(generatedOutfit["shoe"]);
+	console.log(generatedOutfit["bottom"]);
 	var concat =(String) ("" + generatedOutfit["top1"] + "" +  generatedOutfit["top2"] + "" + generatedOutfit["bottom"] + "" + generatedOutfit["shoe"]);
-	alert(concat);
+	console.log(concat);
 	var image = $("<img>");
 	image.attr("src", concat + ".jpg");
 	$("#generated-outfit-image").prepend(image);

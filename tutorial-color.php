@@ -1,3 +1,7 @@
+<?php
+  include "tutorial_footer.php";
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -30,31 +34,13 @@
           <div class="nav-shadow">
           </div>
           <div class="main-content">
+            <!-- End get_header -->
             <div id="tutorial">
-              <h3>basic #2: fit</h3>
+              <h3 id="tutorialname">color</h3>
               <div id="tutorialcontent">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec.
               </div>
             </div>
-            <div>back</div>
-            <div>finish</div>
-          </div>
-          <div class="extra-content">
-            <div class="corgi-help-speech">
-              <div class="aoc-preview"> 
-                <!-- Katlyn put the paragraph of what the Display name is --> 
-                <p>
-                  Let's get the ball rolling with some basics! Select a lesson
-                  on the right.
-                </p>
-              </div>
-            </div>
-            <div class="corgi">
-              <img src="assets/img/corgi_monocole_speech.png" alt="Coordi" />
-            </div>
-            <div class="badges"></div>
-          </div>
-        </div>
-      </div>
-  </body>
-</html>
+<?php
+  tutorialFooter();
+?>

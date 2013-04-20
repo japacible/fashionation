@@ -1,3 +1,7 @@
+<?php
+  include "tutorial_footer.php";
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -30,33 +34,15 @@
           <div class="nav-shadow">
           </div>
           <div class="main-content">
->            <div id="tutorial">
-              <h3>ties #2: double windsor</h3>
+            <!-- End get_header -->
+            <div id="tutorial">
+              <h3 id="tutorialname">color</h3>
               <div id="tutorialcontent">
                 <div class="youtube">
-                  <iframe width="420" height="315" src="http://www.youtube.com/embed/p7X7SpkkEMY" frameborder="0" allowfullscreen></iframe>
+                  <iframe width="420" height="315" src="http://www.youtube.com/embed/5g-nn_P5TgE" frameborder="0" allowfullscreen></iframe>
                 </div>
               </div>
             </div>
-            <div>back</div>
-            <div>finish</div>
-          </div>
-          <div class="extra-content">
-            <div class="corgi-help-speech">
-              <div class="aoc-preview"> 
-                <!-- Katlyn put the paragraph of what the Display name is --> 
-                <p>
-                  Let's get the ball rolling with some basics! Select a lesson
-                  on the right.
-                </p>
-              </div>
-            </div>
-            <div class="corgi">
-              <img src="assets/img/corgi_monocole_speech.png" alt="Coordi" />
-            </div>
-            <div class="badges"></div>
-          </div>
-        </div>
-      </div>
-  </body>
-</html>
+<?php
+  tutorialFooter();
+?>
