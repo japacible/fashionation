@@ -210,13 +210,13 @@ function populateParagraph(string, array, fullname) {
 
 	var paragraph = $("<p>");
 	paragraph.text(fullname); 
-	div.append(paragraph); 
 
 	if (string == "shoe")
    		img.attr("src", "assets/img/aoc_icons/shoes.png");
  	else
     	img.attr("src", "assets/img/aoc_icons/" + array[string] + ".png");
 		div.append(img);
+	div.append(paragraph); 
 		mainDiv.append(div);
 	return mainDiv;
 }
