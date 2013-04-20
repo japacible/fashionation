@@ -323,6 +323,17 @@ h4 {
 #outfit-buttons #random {
   float: right;
 }
+
+#outfit-buttons #dislike {
+  float: left;
+  margin-right: 5px;
+}
+
+#outfit-buttons #like {
+  float: right;
+  margin-left: 5px;
+}
+
 .outfit-button {
   float: left;
 }

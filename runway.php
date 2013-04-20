@@ -65,5 +65,11 @@
             </div>
           </div>
         </div>
+                      <?php 
+              if(isset($_GET["success"])) {?>
+              <div id="SuccessMessageUpload">
+                Your file was uploaded successfully! (Click this message box to hide.)
+              </div>
+              <?php } ?>
       </div>
   </body>
