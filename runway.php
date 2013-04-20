@@ -33,7 +33,7 @@
         <div class="main-container">
           <div class="nav-shadow">
           </div>
-          <div class="main-content">
+          <div class="main-content" style="width: 900px !important;">
             <!-- End get_header -->
             <div id="runway">
               <h3>Runway</h3>
@@ -50,7 +50,6 @@
               </div>
             </div>
           </div>
-          <div class="extra-content">
         </div>
       </div>
   </body>
