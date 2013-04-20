@@ -44,6 +44,10 @@ body {
   font-family: "Gentium Basic";
 }
 
+strong {
+  font-weight: 700;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-family: "FolksLightRegular";
@@ -87,9 +91,11 @@ a {
 }
 
 .container {
-  border: #a3a3a3 solid 2px;
+  border-right: #a3a3a3 solid 2px;
+  border-left: #a3a3a3 solid 2px;
   width: 940px;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 header {
@@ -137,6 +143,7 @@ nav .vertical-ruler {
   clear: both;
   overflow: hidden;
   background-image: url('../img/wood_background.jpg');
+  padding-bottom: 20px;
 }
 
 .main-content {
@@ -159,6 +166,12 @@ nav .vertical-ruler {
   font-size: 24pt;
   letter-spacing: 5px;
   color: #634b34;
+}
+
+.wardrobe-error {
+  color: red;
+  font-size: 12pt;
+  font-weight: 700;
 }
 
 .article-of-clothing {
@@ -197,10 +210,18 @@ nav .vertical-ruler {
 #speechbub {
     border-radius: 20px;
     background-color: white;
-    height: 300px;
     color: black;
     padding: 45px;
-    margin: 30px 85px;
+    margin-right: 80px;
+    margin-left: 280px;
+    margin-top: 50px;
+    font-size: 16pt;
+    color: #634b34;
+}
+
+.corgi-speech {
+  text-align: right;
+  padding-right: 100px;
 }
 
 #tutorial {
@@ -237,38 +258,59 @@ nav .vertical-ruler {
   opacity: 1 !important;
 }
 
+#outfit-buttons {
+  width: 170px;
+  margin: 0 auto;
+}
+
+#outfit-buttons #generated {
+  float: left;
+}
+
+#outfit-buttons #random {
+  float: right;
+}
+
 .outfit-button {
-  padding: 5px 30px;
-  height: 20px;
+  padding: 7px 10px;
   background-color: #634b34;
   float: left;
-  margin-right: 20px;
+  border-radius: 3px;
 }
 
 #generate:hover, #random:hover {
   cursor: pointer;
 }
 
-.main-content, .extra-content{
-}
-
 .main-content-2 {
-  width: 600px;
+  width: 450px;
   margin: 0 auto;
 }
 
+.generated-outfit {
+  overflow: hidden;
+}
+
 .generated-outfit .clothing {
-  margin: 10px 0px;
+  margin-bottom: 10px;
   height: 120px;
   width: 120px;
   background-color: white;
 }
 
-#generated-outfit-image {
+#generated-outfit-image img{
+  border: 1px solid black;
+  min-width: 100px;
+  min-height: 200px;
+  max-width: 300px;
+  max-height: 400px;
+}
+
+#generated-outfit-image p {
   width: 300px;
   height: 400px;
-  border: 1px solid black;
 }
+
 
 #generated-outfit-aoc {
   float: left;
@@ -278,4 +320,25 @@ nav .vertical-ruler {
   float: right;
 }
 
+#generated-outfit-image p {
+  color: #634b34;
+  font-size: 8pt;
+}
+
+#generated-outfit-buttons {
+  overflow: hidden;
+  width: 134px;
+  margin: 10px auto;
+}
+
+#love {
+  float: left !important;
+}
+
+#generate-another {
+  float: right !important;
+}
+
+.main-content, .extra-content{
+}
 
