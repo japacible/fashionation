@@ -7,7 +7,6 @@ var weather = "";
 
 $(document).ready(function() {
 	$(".main-content-2").hide();
-	getWeather(); 
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=tops", populateShirts);
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=bottoms", populatePants);
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=shoes", populateShoes);
@@ -17,6 +16,7 @@ $(document).ready(function() {
 });
 
 function populateWeatherStats() {
+	getWeather(); 
 	var code = getWeatherCode();
 	var temp = getTemperature();
 	var stat = getWeatherStatus();

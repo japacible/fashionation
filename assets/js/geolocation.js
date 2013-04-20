@@ -15,18 +15,12 @@ function getTemperature() {
 }
 
 function getWeatherStatus() {
-	if(!weatherResult) {
-		getWeather();
-	}
 	console.log("Icon in geol:");
 	console.log(icon);
 	return icon;
 }
 
 function getCity() {
-	if(!weatherResult) {
-		getWeather();
-	}
 	return cityLocation;
 }
 
