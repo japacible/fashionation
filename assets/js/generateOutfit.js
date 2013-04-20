@@ -183,8 +183,12 @@ function concatenateOutfit(generatedOutfit) {
 
 function addToMainDiv(string, array) {
 	var result;
+	var string2 = string;
+	if(string.indexOf("top") >=0) {
+		string2 = "top";
+	}
 	// Look up full name
-	$.get("http://pingyang.me/fashionation/api/gettable.php?table=" + string + "s&id=" + array[string], function(fullname) {result = populateParagraph(string, array, fullname);});
+	$.get("http://pingyang.me/fashionation/api/gettable.php?table=" + string2 + "s&id=" + array[string], function(fullname) {result = populateParagraph(string, array, fullname);});
 	return result;
   
 }
