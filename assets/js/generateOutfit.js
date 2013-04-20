@@ -192,7 +192,7 @@ function addToMainDiv(mainDiv, string, array) {
   
 }
 
-function populateParagraph(div) {
+function populateParagraph(mainDiv, string, array, fullname) {
 	var div = $("<div>");
 	div.addClass("special");
 	div.addClass("clothing");
