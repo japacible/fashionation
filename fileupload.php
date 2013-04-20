@@ -138,7 +138,7 @@
               <?php 
               if(isset($_GET["success"])) {?>
               <div id="errorMessageUpload">
-                Whoops! Looks like your file didn't upload correctly. Please make sure it is either a .jpg, .jpeg, or .png. Please also make sure that the file is under 500KB.
+                Whoops! Looks like your file didn't upload correctly. Please make sure it is either a .jpg, .jpeg, or .png. Please also make sure that the file is under 500KB. (Click this message box to hide.)
               </div>
               <?php } ?>
         </div> <!-- end main container -->
