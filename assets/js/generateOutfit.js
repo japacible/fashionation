@@ -167,6 +167,7 @@ function concatenateOutfit(generatedOutfit) {
 
   return concat;
 }
+	console.log("LOOOK HEREEEE");
 	console.log(generateOutfit);
 	// fill in images with selections
 	var holdAllTheImages = $("#generated-outfit-aoc");
