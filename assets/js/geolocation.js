@@ -1,6 +1,12 @@
 var latitude = null;
 var longitude = null;
 var timer = null;
+var weatherResult = null;
+
+function getWeatherCode() {
+	getWeather();
+	return weatherResult;
+}
 
 function useGeolocation(position) {
 	latitude = position.coords.latitude;
@@ -8,8 +14,6 @@ function useGeolocation(position) {
 
 	$("#latitude").html(latitude);
 	$("#longitude").html(longitude);
-
-	alert(latitude + "," + longitude);
 }
 
 function onGeolocationError(error) {
@@ -17,6 +21,10 @@ function onGeolocationError(error) {
 }
 
 $(document).ready(function(){
+	getWeather();	
+});
+
+function getWeather() {
 	if(Modernizr.geolocation) {
 		$("#geolocation").html("is supported.");
 		navigator.geolocation.getCurrentPosition(useGeolocation, onGeolocationError);
@@ -25,10 +33,9 @@ $(document).ready(function(){
 		timer = setInterval(checkUpdate, 500);
 	} else {
 		$("#geolocation").html("is not supported.");
-		//return 0;
+		weatherResult = 0;
 	}
-	
-});
+}
 
 function checkUpdate() {
 	if(latitude && longitude) {
@@ -55,12 +62,12 @@ function ajaxSuccess(parsed_json) {
 
 	if ($.inArray(icon, badWeatherIcons) > -1) {
 		alert("bad weather.");
-		//return 2;
+		weatherResult = 2;
 	} else if ($.inArray(icon, rainWeatherIcons) > -1) {
 		alert("rainy weather.");
-		//return 1;
+		weatherResult = 1;
 	} else {
 		alert("okay weather.");
-		//return 0;
+		weatherResult = 0;
 	}
 }
