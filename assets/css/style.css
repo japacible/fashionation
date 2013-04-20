@@ -27,30 +27,6 @@
 }
 
 @font-face {
-    font-family: 'FolksBold';
-    src: url('../fonts/Folks-Bold-webfont.eot');
-    src: url('../fonts/Folks-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Folks-Bold-webfont.woff') format('woff'),
-         url('../fonts/Folks-Bold-webfont.ttf') format('truetype'),
-         url('../fonts/Folks-Bold-webfont.svg#FolksBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'FolksHeavyRegular';
-    src: url('../fonts/Folks-Heavy-webfont.eot');
-    src: url('../fonts/Folks-Heavy-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Folks-Heavy-webfont.woff') format('woff'),
-         url('../fonts/Folks-Heavy-webfont.ttf') format('truetype'),
-         url('../fonts/Folks-Heavy-webfont.svg#FolksHeavyRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
     font-family: 'Enriqueta';
     src: url('../fonts/Enriqueta-Regular.otf');
     font-weight: normal;
@@ -65,7 +41,7 @@
 body {
   background-color: #272727;
   color: #efefef;
-  font-family: "Enriqueta";
+  font-family: "Gentium Basic";
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -118,13 +94,11 @@ a {
 
 header {
   background-image: url('../img/fashionation_banner.jpg');
-  background-repeat: x-repeat;
 
 }
 
 h1 {
   padding: 40px 0;
-  font-weight: grey;
   text-align: center;
   font-size: 56pt;
   letter-spacing: 5px;
@@ -171,7 +145,7 @@ nav .vertical-ruler {
   margin-left: 20px;
 }
 
-.clothing {
+.main-content .clothing {
   background-color: white;
   width: 75px;
   height: 75px;
@@ -260,5 +234,48 @@ nav .vertical-ruler {
 }
 
 .highlight {
-  opacacity: 1;
+  opacity: 1 !important;
 }
+
+.outfit-button {
+  padding: 5px 30px;
+  height: 20px;
+  background-color: #634b34;
+  float: left;
+  margin-right: 20px;
+}
+
+#generate:hover, #random:hover {
+  cursor: pointer;
+}
+
+.main-content, .extra-content{
+}
+
+.main-content-2 {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.generated-outfit .clothing {
+  margin: 10px 0px;
+  height: 120px;
+  width: 120px;
+  background-color: white;
+}
+
+#generated-outfit-image {
+  width: 300px;
+  height: 400px;
+  border: 1px solid black;
+}
+
+#generated-outfit-aoc {
+  float: left;
+}
+
+#generated-outfit-image {
+  float: right;
+}
+
+
