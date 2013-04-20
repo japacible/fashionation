@@ -172,7 +172,7 @@ function concatenateOutfit(generatedOutfit) {
 	var image = $("<img>");
 	var imageLocation = "assets/img/outfits/" + concatenateOutfit(generatedOutfit) + ".jpg";
 	var exists = ImageExist(imageLocation);
-	if(exists) {}
+	if(exists) {
 		image.attr("src", imageLocation);
 	} else {
 		image = $("<p>");
