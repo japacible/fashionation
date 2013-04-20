@@ -11,6 +11,6 @@
 		//print("bad file type or size");
 	}
 
-	header('Location: http://www.google.com');
+	header('Location: coordi.php');
 ?>
 
