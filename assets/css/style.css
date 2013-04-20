@@ -173,9 +173,13 @@ h3 {
   font-weight: 700;
 }
 
+#tops-error, #bottoms-error, #shoes-error {
+  visibility: hidden;
+}
+
 .article-of-clothing {
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .extra-content {
