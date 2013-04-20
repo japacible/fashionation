@@ -50,21 +50,54 @@
 
 }
 
+@font-face {
+    font-family: 'Enriqueta';
+    src: url('../fonts/Enriqueta-Regular.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Enriqueta';
+    src: url('../fonts/Enriqueta-Bold.otf');
+    font-weight: bold;
+}
+
 body {
-  background-color: #141414;
+  background-color: #272727;
   color: #efefef;
-  font-family: "FolksLightRegular";
+  font-family: "Enriqueta";
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+  font-family: "FolksLightRegular";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.fashionation-header p {
+  text-align: center;
+  font-size: 12pt;
 }
 
 .fashionation-header h1 {
-  font-weight: normal;
   font-size: 50pt;
   text-align: center;
-  margin-top: 300px;
+}
+
+.fashionation-header strong, #login strong {
+  color: #769bd1;
+}
+
+
+#login h2 {
+  text-align: center;
+  font-family: "FolksLightRegular";
+  font-size: 20pt;
+  letter-spacing: 5px;
 }
 
 #front-page-image {
@@ -75,6 +108,12 @@ h1, h2, h3, h4, h5, h6 {
 #login p {
   margin-top: 30px;
   text-align: center;
+}
+
+.container {
+  border: #a3a3a3 solid 2px;
+  width: 940px;
+  margin: 0 auto;
 }
 
 header {
@@ -91,39 +130,45 @@ h1 {
   letter-spacing: 5px;
 }
 
+nav {
+  overflow: hidden;
+  background-color: #24303a;
+  padding: 15px 0;
+}
+
 nav h2 {
   font-weight: normal;
   text-align: center;
-  padding: 15px 0;
   font-size: 20pt;
-}
-
-nav {
-  overflow: hidden;
-}
-
-.container {
-  border: #a3a3a3 solid 2px;
-  width: 940px;
-  margin: 0 auto;
+  letter-spacing: 5px;
 }
 
 nav > div {
-  width: 470px;
-  background-color: #24303a;
+  width: 468px;
   float: left;
 }
 
-.mainContent {
+nav .vertical-ruler {
+  width: 2px;
+  background-color: black;
+}
+
+.nav-shadow {
+  background-image: url('../img/nav_shadow.png');
+  height: 8px;
+  margin-bottom: 25px;
+}
+
+.main-container {
   clear: both;
-  margin-top: 30px;
   overflow: hidden;
   background-image: url('../img/wood_background.jpg');
 }
 
-#wardrobe {
+.main-content {
   width: 600px;
   float: left;
+  margin-left: 20px;
 }
 
 .clothing {
@@ -139,6 +184,7 @@ nav > div {
  h3 {
   font-size: 24pt;
   letter-spacing: 5px;
+  color: #634b34;
 }
 
 .article-of-clothing {
@@ -146,8 +192,9 @@ nav > div {
   margin-bottom: 20px;
 }
 
-.aoc-preview {
-  width: 340px;
+.extra-content {
+  width: 300px;
+  margin-right: 20px;
   padding: 20px 0;
   background-color: grey;
   float: left;
@@ -179,11 +226,10 @@ nav > div {
     height: 300px;
     color: black;
     padding: 45px;
-    margin: 45px;
+    margin: 30px 85px;
 }
 
 #tutorial {
-    background-color: white;
     color: black;
 }
 
@@ -202,4 +248,8 @@ nav > div {
 
 .tutorial-group {
   margin: 15px;
+}
+
+.youtube {
+  text-align: center;
 }

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 76d742e29ce38ad73efe97a59cded7be40a25514
 var selected = {"top" : [], 
 				"bottom" : [],
 				"shoe" : []
 			   };
 
+<<<<<<< HEAD
+=======
+$(document).ready(function() {
+	$(".mainContent2").hide();
+	$.get("http://pingyang.me/fashionation/api/gettable.php?table=tops", populateShirts);
+	$.get("http://pingyang.me/fashionation/api/gettable.php?table=bottoms", populatePants);
+	$.get("http://pingyang.me/fashionation/api/gettable.php?table=shoes", populateShoes);
+	$("#generate").click(generateOutfit);
+	$("#random").click(randomOutfit);
+>>>>>>> 76d742e29ce38ad73efe97a59cded7be40a25514
 $(document).ready(function() {
 	$(".mainContent2").hide();
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=tops", populateShirts);
@@ -37,7 +51,10 @@ function populateLoop(string, array) {
 		element.addClass("clothing");
 		element.attr("id", id);
 		element.click(highlight);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 76d742e29ce38ad73efe97a59cded7be40a25514
 		var img = $("<img>");
 		img.attr("src", "assets/img/icons/clothing/" + id);
 
@@ -102,3 +119,7 @@ function displayOutfit() {
 	$(".mainContent").hide();
 	$(".mainContent2").show();
 }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 76d742e29ce38ad73efe97a59cded7be40a25514
