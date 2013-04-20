@@ -3,8 +3,11 @@ var selected = {"top" : [],
 				"shoe" : []
 			   };
 
+var weather = "";
+
 $(document).ready(function() {
-	$(".mainContent2").hide();
+	$(".main-content-2").hide();
+	weather = getWeatherCode();
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=tops", populateShirts);
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=bottoms", populatePants);
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=shoes", populateShoes);
@@ -67,7 +70,6 @@ function highlight() {
 			alert("Please select up to 2 shirts, and only one pair of pants and one set of shoes.");
 		}
 	}
-	console.log(selected);
 }
 
 function generateOutfit() {
@@ -90,15 +92,49 @@ function generateOutfit() {
 	}
 
 	$.get("http://pingyang.me/fashionation/api/getoutfits.php?top1=" + top1_id + "&top2=" + top2_id + 
-			"&bottom=" + bottom_id + "&shoe=" + shoe_id, displayOutfit);
+			"&bottom=" + bottom_id + "&shoe=" + shoe_id + "&weather=" + weather, displayOutfit);
 }
 
 function randomOutfit() {
-	$.get("http://pingyang.me/fashionation/api/getoutfits.php?top1=&top2=&bottom=&shoe=", displayOutfit);
+	$.get("http://pingyang.me/fashionation/api/getoutfits.php?top1=&top2=&bottom=&shoe=&weather=" + weather, displayOutfit);
 }
 
-function displayOutfit() {
-	alert("here");
-	$(".mainContent").hide();
-	$(".mainContent2").show();
+function displayOutfit(generatedOutfit) {
+	generatedOutfit =  $.parseJSON(generatedOutfit);
+
+	$(".main-content").hide();
+	$(".extra-content").hide();
+	$(".main-content-2").show();
+
+	// fill in images with selections
+	var holdAllTheImages = $("<div>");
+
+	var concat = generatedOutfit["top1"] + generatedOutfit["top2"] + generatedOutfit["bottom"] + generatedOutfit["shoe"];
+	var concatDiv = $("<div>");
+	var concatImg = $("<img>");
+	concatDiv.addClass("generated-outfit-image");
+	concatImg.attr("src", concat);
+	concatDiv.append(concatImg);
+	holdAllTheImages.append(concatDiv);
+
+	holdAllTheImages = addToMainDiv(holdAllTheImages, "top1", generatedOutfit);
+	if(generatedOutfit["top2"]) {
+		holdAllTheImages = addToMainDiv(holdAllTheImages, "top2", generatedOutfit);
+	} 
+	holdAllTheImages = addToMainDiv(holdAllTheImages, "bottom", generatedOutfit);
+	holdAllTheImages = addToMainDiv(holdAllTheImages, "shoe", generatedOutfit);
+
+	$(".main-content-2").append(holdAllTheImages);
+}
+
+function addToMainDiv(mainDiv, string, array) {
+	var div = $("<div>");
+	var img = $("<img>");
+	div.addClass("clothing");
+	div.addClass("top");
+	div.addClass("large");
+	img.attr("src", array[string]);
+	div.append(img);
+	holdAllTheImages.append(div);
+	return holdAllTheImages;
 }
