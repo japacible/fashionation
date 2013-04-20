@@ -131,7 +131,7 @@ nav > div {
 .nav-shadow {
   background-image: url('../img/nav_shadow.png');
   height: 8px;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .main-container {
@@ -142,9 +142,11 @@ nav > div {
 }
 
 .main-content {
-  width: 600px;
+  margin-top: 3px;
+  width: 550px;
   float: left;
   margin-left: 20px;
+  padding-left: 20px;
 }
 
 .main-content .clothing {
@@ -157,10 +159,12 @@ nav > div {
 
 }
 
- h3 {
-  font-size: 24pt;
+h3 {
+  font-size: 40px;
   letter-spacing: 5px;
   color: #634b34;
+  text-transform: uppercase;
+
 }
 
 .wardrobe-error {
@@ -177,11 +181,11 @@ nav > div {
 .extra-content {
   width: 300px;
   margin-right: 20px;
-  padding: 20px 0;
-  float: left;
-  margin-top: 5px;
+  padding-right: 20px;
+  float: right;
   text-align: center;
   color: #634b34;
+  font-size: 14pt;
 }
 
 .corgi-help-speech {
@@ -191,13 +195,13 @@ nav > div {
 }
 
 .corgi-help-speech p {
-  text-align: center;
-  padding-bottom: 10px;
+  text-align: left;
+  padding: 8px 0;
 }
 
 .corgi-help-speech ol {
   text-align: left;
-  margin-bottom: 10px;
+  padding: 8px 0;
 }
 
 .corgi-help-speech ol li {
@@ -205,7 +209,7 @@ nav > div {
 }
 
 #aoc-help-image {
-  max-width: 200px;
+  max-width: 220px;
 }
 
 #suggestion {
@@ -243,15 +247,23 @@ nav > div {
   padding-right: 100px;
 }
 
-#tutorial {
+#tutoriallist ol li {
+  padding: 10px 0;
+}
+
+#tutoriallist, #tutorial{
   color: #634b34;
+}
+
+h4 {
+  font-size: 20pt;
+  padding: 5px 20px;
+  color: #755b46;
 }
 
 #tutorialname {
     height: 50px;
-    font-size: 56px;
     margin: 15px;
-    padding-top: 25px;
 }
 
 #tutorialcontent {
@@ -262,7 +274,7 @@ nav > div {
 }
 
 .tutorial-group {
-  margin: 15px;
+  margin-bottom: 20px;
 }
 
 .youtube {
@@ -302,6 +314,7 @@ nav > div {
 }
 
 .main-content-2 {
+  margin-top: 3px;
   width: 450px;
   margin: 0 auto;
 }
