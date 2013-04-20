@@ -111,7 +111,7 @@ function displayOutfit(generatedOutfit) {
 	var concat =(String) ("" + generatedOutfit["top1"] + "" +  generatedOutfit["top2"] + "" + generatedOutfit["bottom"] + "" + generatedOutfit["shoe"]);
 	var image = $("<img>");
 	image.attr("src", concat + ".jpg");
-	$("#generated-outfit-image").append(image);
+	$("#generated-outfit-image").prepend(image);
 
 	holdAllTheImages = addToMainDiv(holdAllTheImages, "top1", generatedOutfit);
 	if(generatedOutfit["top2"]) {
