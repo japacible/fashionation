@@ -56,6 +56,10 @@ body {
   font-family: "FolksLightRegular";
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
 .fashionation-header h1 {
   font-weight: normal;
   font-size: 50pt;
@@ -117,11 +121,21 @@ nav > div {
   width: 600px;
 }
 
-#tops .top{
+.clothing {
   background-color: white;
   width: 75px;
   height: 75px;
-  margin: 10px;
+  margin: 10px 10px 10px 0px;
   float: left;
+  opacity: .7;
 }
 
+ h3 {
+  font-size: 24pt;
+  letter-spacing: 5px;
+}
+
+.article-of-clothing {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
