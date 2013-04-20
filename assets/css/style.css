@@ -114,9 +114,14 @@ nav > div {
   float: left;
 }
 
+.nav-shadow {
+  background-image: url('../img/nav_shadow.png');
+  height: 8px;
+  margin-bottom: 25px;
+}
+
 .mainContent {
   clear: both;
-  margin-top: 30px;
   overflow: hidden;
   background-image: url('../img/wood_background.jpg');
 }
@@ -124,6 +129,7 @@ nav > div {
 #wardrobe {
   width: 600px;
   float: left;
+  margin-left: 20px;
 }
 
 .clothing {
@@ -139,6 +145,7 @@ nav > div {
  h3 {
   font-size: 24pt;
   letter-spacing: 5px;
+  color: #634b34;
 }
 
 .article-of-clothing {
@@ -147,7 +154,8 @@ nav > div {
 }
 
 .aoc-preview {
-  width: 340px;
+  width: 300px;
+  margin-right: 20px;
   padding: 20px 0;
   background-color: grey;
   float: left;
