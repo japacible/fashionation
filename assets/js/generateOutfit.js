@@ -12,7 +12,7 @@ $(document).ready(function() {
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=shoes", populateShoes);
 	$("#generate").click(generateOutfit);
 	$("#random").click(randomOutfit);
-	setTimeout(populateWeatherStats, 500);
+	setTimeout(populateWeatherStats, 700);
 });
 
 function populateWeatherStats() {
@@ -63,7 +63,6 @@ function populateLoop(string, array) {
 		element.mouseenter(hoverPreview);
 
 		var img = $("<img>");
-    alert(string);
     if (string == "shoe")
       img.attr("src", "assets/img/aoc_icons/shoes.png");
     else
