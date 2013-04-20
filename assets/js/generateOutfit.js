@@ -184,7 +184,7 @@ function concatenateOutfit(generatedOutfit) {
 	holdAllTheImages = addToMainDiv(holdAllTheImages, "shoe", generatedOutfit);
 }
 
-function addToMainDiv() {
+function addToMainDiv(mainDiv, string, array) {
 	var result;
 	// Look up full name
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=" + string + "s&id=" + array[string], function(fullname) {result = populateParagraph(mainDiv, string, array, fullname);});
