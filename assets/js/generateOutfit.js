@@ -108,14 +108,10 @@ function displayOutfit(generatedOutfit) {
 
 	// fill in images with selections
 	var holdAllTheImages = $("<div>");
+	holdAllTheImages.attr("id", "LOLWAT");
 
 	var concat = generatedOutfit["top1"] + generatedOutfit["top2"] + generatedOutfit["bottom"] + generatedOutfit["shoe"];
-	var concatDiv = $("<div>");
-	var concatImg = $("<img>");
-	concatDiv.addClass("generated-outfit-image");
-	concatImg.attr("src", concat);
-	concatDiv.append(concatImg);
-	holdAllTheImages.append(concatDiv);
+	$("#generated-outfit-image img").attr("src", concat + ".jpg");
 
 	holdAllTheImages = addToMainDiv(holdAllTheImages, "top1", generatedOutfit);
 	if(generatedOutfit["top2"]) {
@@ -135,6 +131,6 @@ function addToMainDiv(mainDiv, string, array) {
 	div.addClass("large");
 	img.attr("src", array[string]);
 	div.append(img);
-	holdAllTheImages.append(div);
-	return holdAllTheImages;
+	mainDiv.append(div);
+	return mainDiv;
 }
