@@ -45,6 +45,7 @@ function populateLoop(string, array) {
 
 		var img = $("<img>");
 		img.attr("src", "assets/img/icons/clothing/" + id + ".jpg");
+		img.attr("alt", name);
 
 		element.append(img);
 		var parent = "#" + string + "s";
@@ -140,5 +141,22 @@ function hoverPreview() {
 	var paragraph = $("#aoc-help");
 	var image = $("#aoc-help-image");
 	paragraph.html("This is a preview of what <strong>" + full + "</strong> might look like.");
-	image.attr("src", "assets/img/outfits/" + id + ".jpg");
+	image.attr("src", "assets/img/aoc_images/" + id + ".jpg");
+}
+
+function grabUploadedImages() {
+	var ul = $("<ul>");
+	var arrayPNG = glob("/uploadedimages/*.png");
+	var arrayJPG = glob("/uploadedimages/*.jpg");
+	for(var i = 0; i < arrayPNG.length; i++) {
+		var img = $("<img>");
+		img.attr("src", arrayPNG[i]);
+		ul.append(img);
+	}
+	for(var i = 0; i < arrayJPG.length; i++) {
+		var img = $("<img>");
+		img.attr("src", arrayJPG[i]);
+		ul.append(img);
+	}
+	$(body).append(ul);
 }
