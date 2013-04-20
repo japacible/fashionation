@@ -34,17 +34,32 @@
           </div>
           <div class="main-content">
           	<!--File Upload-->
-            <form action="result.php" method="post" enctype="multipart/form-data">
+            <form action="result.php"
+				      method="post" enctype="multipart/form-data">
 				  		Upload an image:
 				  		<input type="file" name="image" />
-				  		<input type="submit" />
+
+							<!--Wardrobe-->
+	            <div id="wardrobe">
+	            	<h2>What are you wearing?</h2>
+	              <div class="article-of-clothing" id="tops">
+	              	<h3>TOPS</h3>
+	                <p id="tops-error" class="wardrobe-error">You cannot select more than two tops.</p>
+	              </div>
+	            </div>
+	            <div class="article-of-clothing" id="bottoms">
+	                <h3>BOTTOMS</h3>
+	                <p id="bottoms-error" class="wardrobe-error">You cannot select more than one bottom.</p>
+	              </div>
+	              <div class="article-of-clothing" id="shoes">
+	                <h3>SHOES</h3>
+	                <p id="shoes-error" class="wardrobe-error">You cannot select more than one pair of shoes</p>
+	              </div>
+	            </div>
+	            <input type="submit" />
 						</form>
 
-						<!--Wardrobe-->
-            <div id="wardrobe">
-              <div class="article-of-clothing" id="tops">
-              </div>
-            </div>
+              <!--I want buttons like this for submit!-->
             <div id="outfit-buttons">
               <div class="outfit-button" id="generate">
                 coordinate
