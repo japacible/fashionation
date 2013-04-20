@@ -323,15 +323,6 @@ h4 {
 #outfit-buttons #random {
   float: right;
 }
-
-#outfit-buttons #dislike {
-  float: left;
-}
-
-#outfit-buttons #like {
-  float: right;
-}
-
 .outfit-button {
   float: left;
 }
@@ -365,7 +356,7 @@ color: white;
 
 .generated-outfit .clothing {
   margin-bottom: 10px;
-  height: 120px;
+  min-height: 50px;
   width: 120px;
 }
 
@@ -380,6 +371,15 @@ color: white;
 #generated-outfit-image p {
   width: 300px;
   height: 400px;
+}
+
+#generated-outfit-aoc p {
+  text-align: center;
+  color: #634b34;
+}
+
+#generated-outfit-aoc .clothing {
+  text-align: center;
 }
 
 
@@ -438,3 +438,4 @@ section {
   top: 0; left: 0; width: 100%; height: 100%;
   background-color: rgba(100,100,100, 0.5);
 }
+
