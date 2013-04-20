@@ -32,11 +32,18 @@
               </div>
               <div id="largeImgPanel" onclick="hideMe(this);">
                 <img id="largeImg" style="height: 75%; margin: 0; padding: 0;" />
+                <div id="outfit-buttons">
+                  <div class="outfit-button" id="dislike">
+                    Dislike
+                  </div>
+                  <div class="outfit-button" id="like">
+                    Like
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
         <?php 
               if(isset($_GET["success"])) {?>
               <div id="SuccessMessageUpload">
@@ -44,12 +51,4 @@
               </div>
               <?php } ?>
       </div>
-               <div id="outfit-buttons">
-                  <div class="outfit-button" id="dislike">
-                    Dislike
-                  </div>
-                  <div class="outfit-button" id="like">
-                    Like
-                  </div>
-              </div>
   </body>
