@@ -185,28 +185,32 @@ function concatenateOutfit(generatedOutfit) {
 }
 
 function addToMainDiv(mainDiv, string, array) {
+	var result;
+	// Look up full name
+	$.get("http://pingyang.me/fashionation/api/gettable.php?table=" + string + "s&id=" + array[string], function(fullname) {result = populateParagraph(mainDiv, string, array, fullname);});
+	return result;
+  
+}
+
+function populateParagraph(div) {
 	var div = $("<div>");
 	div.addClass("special");
 	div.addClass("clothing");
 	div.addClass("large");
 
-	var img = $("<img>");	
-	// Look up full name
-	$.get("http://pingyang.me/fashionation/api/gettable.php?table=" + string + "s&id=" + array[string], function() {populateParagraph(div);});
-	
-  if (string == "shoe")
-    img.attr("src", "assets/img/aoc_icons/shoes.png");
-  else
-    img.attr("src", "assets/img/aoc_icons/" + array[string] + ".png");
-	div.append(img);
-	mainDiv.append(div);
-	return mainDiv;
-}
+	var img = $("<img>");
 
-function populateParagraph(div) {
 	var paragraph = $("<p>");
 	paragraph.text(array[string]); // TODO use phrazy's 
 	div.append(paragraph); 
+
+	if (string == "shoe")
+   		img.attr("src", "assets/img/aoc_icons/shoes.png");
+ 	else
+    	img.attr("src", "assets/img/aoc_icons/" + array[string] + ".png");
+		div.append(img);
+		mainDiv.append(div);
+	return mainDiv;
 }
 
 function hoverPreview() {
