@@ -4,7 +4,7 @@ var selected = {"top" : [],
 			   };
 
 $(document).ready(function() {
-	$(".mainContent2").hide();
+	$(".main-content-2").hide();
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=tops", populateShirts);
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=bottoms", populatePants);
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=shoes", populateShoes);
@@ -100,5 +100,5 @@ function randomOutfit() {
 function displayOutfit() {
 	alert("here");
 	$(".mainContent").hide();
-	$(".mainContent2").show();
+	$("..main-content-2").show();
 }
