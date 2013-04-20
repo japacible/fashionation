@@ -316,6 +316,7 @@ h4 {
 #outfit-buttons {
   width: 170px;
   margin: 0 auto;
+  z-index: 303030;
 }
 
 #outfit-buttons #generated {
