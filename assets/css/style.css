@@ -156,7 +156,11 @@ nav > div {
   margin: 10px 10px 10px 0px;
   float: left;
   opacity: .7;
+}
 
+.main-content .clothing img {
+  width: 75px;
+  height: 75px;
 }
 
 h3 {
