@@ -441,6 +441,7 @@ section {
 
 #voting-buttons #dislike {
   float: left;
+  padding-right: 10px;
 }
 
 #voting-buttons #like {
