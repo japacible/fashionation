@@ -66,7 +66,7 @@
               </div>
               <div style="clear: both;">
                 <h3>Upload</h3>
-                <p>Upload your own image <a href="fileupload.php">here!</a></p>
+                <p>Upload your own image <strong><a href="fileupload.php">here!</a></strong></p>
               </div>
               <div id="largeImgPanel" onclick="hideMe(this);">
                 <img id="largeImg" style="height: 75%; margin: 0; padding: 0;" />
