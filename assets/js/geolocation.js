@@ -7,18 +7,30 @@ var temp_f = null;
 var icon = null;
 
 function getWeatherCode() {
+	if(!weatherResult) {
+		getWeather();
+	}
 	return weatherResult;
 }
 
 function getTemperature() {
+	if(!weatherResult) {
+		getWeather();
+	}
 	return temp_f;
 }
 
 function getWeatherStatus() {
+	if(!weatherResult) {
+		getWeather();
+	}
 	return icon;
 }
 
 function getCity() {
+	if(!weatherResult) {
+		getWeather();
+	}
 	return cityLocation;
 }
 
