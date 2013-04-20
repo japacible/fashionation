@@ -1,6 +1,6 @@
 function showImage(imgName) {
     document.getElementById('largeImg').src = imgName;
-    $.get("http://pingyang.me/fashionation/api/get_vote.php?pic_name=" + imageName, putVoteResults);
+    $.get("http://pingyang.me/fashionation/api/get_vote.php?pic_name=" + imgName, putVoteResults);
     $("#largeImgPanel").css("visibility", "visible");
     unselectAll();
 }
