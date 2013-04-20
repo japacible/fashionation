@@ -135,9 +135,12 @@ function addToMainDiv(mainDiv, string, array) {
 }
 
 function hoverPreview(id, name) {
+	var location = $("div.aoc-preview");
+	location.html("");
 	var paragraph = $("<p>");
 	paragraph.html("This is a preview of what <strong>" + name + "</strong> might look like.");
-	$("div.aoc-preview").append(paragraph);
-	var image = $(".aoc-preview img");
+	loation.append(paragraph);
+	var image = $("<img>");
 	image.attr("src", "assets/img/outfits/" + id + ".jpg");
+	location.append(image);
 }
