@@ -175,10 +175,11 @@ nav > div {
 }
 
 .extra-content {
+  border-radius: 20px;
   width: 300px;
   margin-right: 20px;
   padding: 20px 0;
-  background-color: grey;
+  background-color: white;
   float: left;
   margin-top: 5px;
   text-align: center;
@@ -332,8 +333,5 @@ nav > div {
 
 #generate-another {
   float: right !important;
-}
-
-.main-content, .extra-content{
 }
 
