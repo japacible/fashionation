@@ -35,14 +35,20 @@
           </div>
           <div class="main-content">
             <!-- End get_header -->
-            <h2>Runway</h2>
-            <?php
-              foreach(glob('uploadedimages/*') as $image)   
-              {     
-                //echo "Filename: " . $image . "<br />";
-                echo "<img src=\"$image\" \/>";
-              }
-            ?>    
+            <div id="runway">
+              <h3>Runway</h3>
+              <div id="userimages">
+                <?php
+                  foreach(glob('uploadedimages/*') as $image)   
+                  {     
+                    //echo "Filename: " . $image . "<br />";
+                    echo "<div style=\"width: 400px; float: left\">
+                      <img src=\"$image\" style=\"max-width: 100%;\" \/>
+                      </div>";
+                  }
+                ?>    
+              </div>
+            </div>
           </div>
           <div class="extra-content">
         </div>
