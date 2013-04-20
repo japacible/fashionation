@@ -429,11 +429,11 @@ section {
   z-index: 100;
   top: 0; left: 0; width: 100%; height: 100%;
   background-color: rgba(100,100,100, 0.5);
+  margin-top: 25px;
 }
 
 #voting-buttons {
   width: 170px;
-  
 }
 
 #voting-buttons #dislike {
