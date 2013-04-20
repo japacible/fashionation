@@ -105,14 +105,52 @@ function displayOutfit(generatedOutfit) {
 	$(".main-content-2").show();
 
 	// fill in images with selections
+	var holdAllTheImages = $("<div>");
+
 	var concat = generatedOutfit["top1"] + generatedOutfit["top2"] + generatedOutfit["bottom"] + generatedOutfit["shoe"];
-	$("TODO IMAGE").attr("src", concat);
-	$("TODO SHIRT1").attr("src", generatedOutfit["top1"]);
+	var concatDiv = $("<div>");
+	var concatImg = $("<img>");
+	concatDiv.addClass("generated-outfit-image");
+	concatImg.attr("src", concat);
+	concatDiv.append(concatImg);
+	holdAllTheImages.append(concatDiv);
+
+	var top1Div = $("<div>");
+	var top1Img = $("<img>");
+	top1Div.addClass("clothing");
+	top1Div.addClass("top");
+	top1Div.addClass("large");
+	top1Img.attr("src", generatedOutfit["top1"]);
+	top1Div.append(top1Img);
+	holdAllTheImages.append(top1Div);
+
 	if(generatedOutfit["top2"]) {
-		$("TODO SHIRT2").attr("src", generatedOutfit["top2"]);	
-	} else {
-		$("TODO SHIRT2").hide();
-	}
-	$("TODO BOTTOM").attr("src", generatedOutfit["bottom"]);
-	$("TODO SHOE").attr("src", generatedOutfit["shoe"]);
+		var top2Div = $("<div>");
+		var top2Img = $("<img>");
+		top2Div.addClass("clothing");
+		top2Div.addClass("top");
+		top2Div.addClass("large");
+		top2Img.attr("src", generatedOutfit["top2"]);
+		top2Div.append(top1Img);
+		holdAllTheImages.append(top2Div);
+	} 
+
+	var bottomDiv = $("<div>");
+	var bottomImg = $("<img>");
+	bottomDiv.addClass("clothing");
+	bottomDiv.addClass("top");
+	bottomDiv.addClass("large");
+	bottomImg.attr("src", generatedOutfit["bottom"]);
+	bottomDiv.append(bottomImg);
+	holdAllTheImages.append(bottomDiv);
+
+	var shoeDiv = $("<div>");
+	var shoeImg = $("<img>");
+	shoeDiv.addclass("clothing");
+	shoeDiv.addClass("top");
+	shoeDiv.addClass("large");
+	shoeImg.attr("src", generatedOutfit["shoe"]);
+	shoeDiv.append(shoeImg);
+	holdAllTheImages.append(shoeDiv);
+	$(".main-content-2").append(holdAllTheImages);
 }
