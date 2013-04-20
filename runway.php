@@ -42,7 +42,7 @@
                   foreach(glob('uploadedimages/*') as $image)   
                   {     
                     //echo "Filename: " . $image . "<br />";
-                    echo "<div style=\"width: 400px; float: left\">
+                    echo "<div style=\"width: 200px; float: left\">
                       <img src=\"$image\" style=\"max-width: 100%;\" \/>
                       </div>";
                   }
