@@ -18,7 +18,7 @@ function tutorialFooter() {
               <div class="aoc-preview"> 
                 <!-- Katlyn put the paragraph of what the Display name is --> 
               <div class="badges"></div>
-                <p>You've earned these badges so far:</p>
+                <p>You'll be a master in no time!</p>
               </div>
             </div>
           </div>

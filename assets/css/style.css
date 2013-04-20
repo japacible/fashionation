@@ -494,3 +494,7 @@ height: 20%;
 background-color: rgba(200,50,50,0.95);
 padding: 1em;
 }
+#tutorialcontent p {
+  margin-bottom: 10px;
+
+}
