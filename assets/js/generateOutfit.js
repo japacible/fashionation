@@ -185,6 +185,8 @@ function concatenateOutfit(generatedOutfit) {
 
 function addToMainDiv(mainDiv, string, array) {
 	var img = $("<img>");
+	var paragraph = $("<p>");
+	p.text(array[string]);
 	var div = $("<div>");
 	div.addClass("clothing");
 	div.addClass("large");
@@ -193,6 +195,7 @@ function addToMainDiv(mainDiv, string, array) {
   else
     img.attr("src", "assets/img/aoc_icons/" + array[string] + ".png");
 	div.append(img);
+	div.append(paragraph);
 	mainDiv.append(div);
 	return mainDiv;
 }
