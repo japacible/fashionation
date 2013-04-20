@@ -18,7 +18,7 @@
           right: 40%;
           width: 20%;
           height: 20%;
-          background-color: rgba(200,50,50,0.95);
+          background-color: rgba(50,200,50,0.95);
           padding: 1em;
         }
     </style>
