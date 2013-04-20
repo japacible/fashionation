@@ -1,7 +1,7 @@
 function showImage(imgName) {
     alert("CLICKED");
     document.getElementById('largeImg').src = imgName;
-    $("#largeImgPanel").show();
+    $("#largeImgPanel").css("visibility", "visible");
     unselectAll();
 }
 
@@ -31,7 +31,7 @@ function likePhoto() {
     var image = $("#largeImg").attr("src").substring(15).substring(-4);
     $.get("http://pingyang.me/fashionation/api/pic_vote.php?pic_name=" + image + "&vote=1");
     alert("liked!");
-    $("#largeImgPanel").hide();
+    $("#largeImgPanel").css("visibility", "hidden");
 }
 
 function dislikePhoto() {
@@ -39,7 +39,7 @@ function dislikePhoto() {
     var image = $("#largeImg").attr("src").substring(15).substring(-4);
     $.get("http://pingyang.me/fashionation/api/pic_vote.php?pic_name=" + image + "&vote=0");
     alert("disliked!");
-    $("#largeImgPanel").hide();
+    $("#largeImgPanel").css("visibility", "hidden");
 }
 
 function hideMessage() {
