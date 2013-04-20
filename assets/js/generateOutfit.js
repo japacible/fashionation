@@ -7,13 +7,32 @@ var weather = "";
 
 $(document).ready(function() {
 	$(".main-content-2").hide();
-	weather = 0; // getWeatherCode(); When jen's stuff is done!! 
+	getWeather(); 
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=tops", populateShirts);
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=bottoms", populatePants);
 	$.get("http://pingyang.me/fashionation/api/gettable.php?table=shoes", populateShoes);
 	$("#generate").click(generateOutfit);
 	$("#random").click(randomOutfit);
+	populateWeatherStats();
 });
+
+function populateWeatherStats() {
+	var code = getWeatherCode();
+	var temp = getTemperature();
+	var stat = getWeatherStatus();
+	var loc = getCity();
+	console.log("code");
+	console.log(code);
+	console.log("temp");
+	console.log(temp);
+	console.log("stat");
+	console.log(stat);
+	console.log('loc');
+	console.log(loc);
+	$("#city").text(loc);
+	$("#stat").text(stat);
+	$("#temp").text(temp);
+}
 
 function populateShirts(shirtObj) {
 	shirtObj = $.parseJSON(shirtObj);
@@ -70,7 +89,24 @@ function highlight() {
 			item.addClass("highlight");
 			selected[type].push(name);
 		} else {
-			alert("Please select up to 2 shirts, and only one pair of pants and one set of shoes.");
+			//ERROR!
+			if(type == "top") {
+				// more than two shirt error
+				$("#tops-error").css("visibility", "visible");
+			setTimeout(function() {
+				$("#tops-error").css("visibility", "hidden");
+			}, 800);
+			} else if (type == "bottom") {
+				$("#bottoms-error").css("visibility", "visible");
+			setTimeout(function() {
+				$("#bottoms-error").css("visibility", "hidden");
+			}, 800);
+			} else if (type = "shoe") {
+				$("#shoes-error").css("visibility", "visible");
+			setTimeout(function() {
+				$("#shoes-error").css("visibility", "hidden");
+			}, 800);
+			}
 		}
 	}
 }
@@ -113,14 +149,7 @@ function displayOutfit(generatedOutfit) {
 
 	// fill in images with selections
 	var holdAllTheImages = $("#generated-outfit-aoc");
-	console.log("OUTFIT GENERATED!");
-	console.log(generatedOutfit);
-	console.log(generatedOutfit["top1"]);
-	console.log(generatedOutfit["top2"]);
-	console.log(generatedOutfit["shoe"]);
-	console.log(generatedOutfit["bottom"]);
 	var concat =(String) ("" + generatedOutfit["top1"] + "" +  generatedOutfit["top2"] + "" + generatedOutfit["bottom"] + "" + generatedOutfit["shoe"]);
-	console.log(concat);
 	var image = $("<img>");
 	image.attr("src", concat + ".jpg");
 	$("#generated-outfit-image").prepend(image);
@@ -154,17 +183,14 @@ function hoverPreview() {
 }
 
 function grabUploadedImages() {
+	$.get("http://pingyang.me/fashionation/api/getPhotos.php", displayPulledImages);
+}
+
+function displayPulledImages(array) {
 	var ul = $("<ul>");
-	var arrayPNG = glob("/uploadedimages/*.png");
-	var arrayJPG = glob("/uploadedimages/*.jpg");
-	for(var i = 0; i < arrayPNG.length; i++) {
+	for(var i = 0; i < array.length; i++) {
 		var img = $("<img>");
-		img.attr("src", arrayPNG[i]);
-		ul.append(img);
-	}
-	for(var i = 0; i < arrayJPG.length; i++) {
-		var img = $("<img>");
-		img.attr("src", arrayJPG[i]);
+		img.attr("src", array[i]);
 		ul.append(img);
 	}
 	$(body).append(ul);

@@ -10,6 +10,8 @@
 
   <body>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://students.washington.edu/apacible/geo/modernizr-2.5.2.js"></script>
+    <script src="assets/js/geolocation.js"></script>
       <script src="assets/js/generateOutfit.js"></script>
       <div class="container">
         <header>
@@ -32,6 +34,9 @@
           <div class="nav-shadow">
           </div>
           <div class="main-content">
+            <div id="weather">
+              The current weather in <span id="city"></span> is <span id="stat"></span> and <span id="temp"></temp> degrees. 
+            </div>
             <div id="wardrobe">
               <div class="article-of-clothing" id="tops">
                 <h3>TOPS</h3>
